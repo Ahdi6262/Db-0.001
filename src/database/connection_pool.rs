@@ -5,14 +5,15 @@ use tokio::sync::RwLock;
 use crate::config::{AppConfig, DatabaseConfig};
 use crate::database::interface::{DatabaseConnection, DatabaseInfo};
 use crate::database::sql::postgres::PostgresConnection;
-use crate::database::sql::mysql::MySqlConnection;
-use crate::database::nosql::mongodb::MongoDbConnection;
-use crate::database::nosql::redis::RedisConnection;
-// use crate::database::nosql::cassandra::CassandraConnection; // Temporarily commented out due to package not available
-use crate::database::graph::neo4j::Neo4jConnection;
-use crate::database::time_series::influxdb::InfluxDbConnection;
-use crate::database::vector::qdrant::QdrantConnection;
 use crate::error::{Error, Result};
+
+// These will be added back incrementally as we expand database support
+// use crate::database::sql::mysql::MySqlConnection;
+// use crate::database::nosql::mongodb::MongoDbConnection;
+// use crate::database::nosql::redis::RedisConnection;
+// use crate::database::graph::neo4j::Neo4jConnection;
+// use crate::database::time_series::influxdb::InfluxDbConnection;
+// use crate::database::vector::qdrant::QdrantConnection;
 
 /// Manages database connections for different types of databases
 pub struct ConnectionManager {
@@ -54,6 +55,8 @@ impl ConnectionManager {
                 let conn = PostgresConnection::new(db_config).await?;
                 Ok(Arc::new(conn))
             },
+            // These will be added back incrementally as we expand database support
+            /*
             "mysql" => {
                 let conn = MySqlConnection::new(db_config).await?;
                 Ok(Arc::new(conn))
@@ -65,10 +68,6 @@ impl ConnectionManager {
             "redis" => {
                 let conn = RedisConnection::new(db_config).await?;
                 Ok(Arc::new(conn))
-            },
-            "cassandra" => {
-                // Temporarily disabled due to package not available
-                Err(Error::UnsupportedDatabaseType("cassandra".to_string()))
             },
             "neo4j" => {
                 let conn = Neo4jConnection::new(db_config).await?;
@@ -82,7 +81,8 @@ impl ConnectionManager {
                 let conn = QdrantConnection::new(db_config).await?;
                 Ok(Arc::new(conn))
             },
-            _ => Err(Error::UnsupportedDatabaseType(db_config.db_type.clone())),
+            */
+            _ => Err(Error::UnsupportedDatabaseType(format!("{} (only PostgreSQL supported in this version)", db_config.db_type))),
         }
     }
 

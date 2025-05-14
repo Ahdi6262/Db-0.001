@@ -5,31 +5,29 @@ edition = "2021"
 authors = ["Unified Database API Team"]
 description = "A unified API for multiple database types"
 
+[[bin]]
+name = "unified_db_api"
+path = "src/main.rs"
+
+[[bin]]
+name = "minimal"
+path = "src/minimal.rs"
+
+[[bin]]
+name = "simple"
+path = "src/simple.rs"
+
+[[bin]]
+name = "mini_api"
+path = "src/mini_api.rs"
+
 [dependencies]
 # Web framework
 actix-web = "4.4.0"
 actix-rt = "2.8.0"
 
-# SQL databases
-diesel = { version = "2.1.0", features = ["postgres", "mysql", "r2d2"] }
-sqlx = { version = "0.7.1", features = ["runtime-tokio-rustls", "postgres", "mysql", "sqlite", "any"] }
-
-# NoSQL databases
-mongodb = "2.6.0"
-redis = "0.23.0"
-# cassandra-rs = "3.0.0" # Temporarily commented out due to package not found
-
-# Graph databases
-neo4rs = "0.6.2"
-
-# Time series databases
-influxdb = "0.6.0"
-
-# Vector databases
-qdrant-client = "1.5.0"
-
-# Connection pooling
-r2d2 = "0.8.10"
+# SQL databases - starting with PostgreSQL
+sqlx = { version = "0.7.1", features = ["runtime-tokio-rustls", "postgres", "json", "uuid", "macros"] }
 
 # Async runtime
 tokio = { version = "1.32.0", features = ["full"] }
@@ -61,3 +59,11 @@ chrono = { version = "0.4.26", features = ["serde"] }
 uuid = { version = "1.4.1", features = ["v4", "serde"] }
 futures = "0.3.28"
 dotenv = "0.15.0"
+num_cpus = "1.15.0"
+
+# To be added back incrementally as we expand database support
+# mongodb = "2.6.0"
+# redis = "0.23.0"
+# neo4rs = "0.6.2"
+# influxdb = "0.6.0"
+# qdrant-client = "1.5.0"
