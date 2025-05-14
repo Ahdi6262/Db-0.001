@@ -1,4 +1,4 @@
-modules = ["rust", "nodejs-20"]
+modules = ["rust", "nodejs-20", "postgresql-16"]
 
 [nix]
 channel = "stable-24_05"
@@ -22,7 +22,7 @@ args = "Minimal API"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "NodeJS DB API Server"
+args = "Multi-DB Unified API Server"
 
 [[workflows.workflow]]
 name = "Unified Database API Server"
@@ -43,12 +43,12 @@ args = "cargo run --release --bin mini_api"
 waitForPort = 8000
 
 [[workflows.workflow]]
-name = "NodeJS DB API Server"
+name = "Multi-DB Unified API Server"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "node simple_server.js"
+args = "node unified_db_api_server.js"
 waitForPort = 8000
 
 [deployment]
