@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[\"alloc\", \"default\", \"std\"]","declared_features":"[\"alloc\", \"compiler_builtins\", \"core\", \"default\", \"libc\", \"logging\", \"rustc-dep-of-std\", \"std\", \"use_std\"]","target":11745930252914242013,"profile":1369601567987815722,"path":13133589021583227300,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/memchr-a0a28a353f7ecf32/dep-lib-memchr","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"alloc\", \"default\", \"std\"]",
+  "declared_features": "[\"alloc\", \"compiler_builtins\", \"core\", \"default\", \"libc\", \"logging\", \"rustc-dep-of-std\", \"std\", \"use_std\"]",
+  "target": 11745930252914242013,
+  "profile": 1369601567987815722,
+  "path": 13133589021583227300,
+  "deps": [],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/memchr-a0a28a353f7ecf32/dep-lib-memchr",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

@@ -1,1 +1,26 @@
-{"rustc":8750902384292223123,"features":"[\"bytes\", \"default\", \"fs\", \"io-util\", \"libc\", \"mio\", \"net\", \"rt\", \"socket2\", \"sync\", \"time\"]","declared_features":"[\"bytes\", \"default\", \"fs\", \"full\", \"io-std\", \"io-util\", \"libc\", \"macros\", \"mio\", \"net\", \"parking_lot\", \"process\", \"rt\", \"rt-multi-thread\", \"signal\", \"signal-hook-registry\", \"socket2\", \"sync\", \"test-util\", \"time\", \"tokio-macros\", \"tracing\", \"windows-sys\"]","target":9605832425414080464,"profile":10836672702722740739,"path":17409827951357082548,"deps":[[1208444357745175282,"mio",false,2411941461555463381],[1906322745568073236,"pin_project_lite",false,3318407851077010326],[2924422107542798392,"libc",false,6658437372993476170],[8431740714262224655,"socket2",false,1498591301489176753],[16066129441945555748,"bytes",false,12932066869364542047]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/tokio-7f770721214f48ab/dep-lib-tokio","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"bytes\", \"default\", \"fs\", \"io-util\", \"libc\", \"mio\", \"net\", \"rt\", \"socket2\", \"sync\", \"time\"]",
+  "declared_features": "[\"bytes\", \"default\", \"fs\", \"full\", \"io-std\", \"io-util\", \"libc\", \"macros\", \"mio\", \"net\", \"parking_lot\", \"process\", \"rt\", \"rt-multi-thread\", \"signal\", \"signal-hook-registry\", \"socket2\", \"sync\", \"test-util\", \"time\", \"tokio-macros\", \"tracing\", \"windows-sys\"]",
+  "target": 9605832425414080464,
+  "profile": 10836672702722740739,
+  "path": 17409827951357082548,
+  "deps": [
+    [1208444357745175282, "mio", false, 2411941461555463381],
+    [1906322745568073236, "pin_project_lite", false, 3318407851077010326],
+    [2924422107542798392, "libc", false, 6658437372993476170],
+    [8431740714262224655, "socket2", false, 1498591301489176753],
+    [16066129441945555748, "bytes", false, 12932066869364542047]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/tokio-7f770721214f48ab/dep-lib-tokio",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

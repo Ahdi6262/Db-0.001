@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[\"percent-encode\", \"percent-encoding\"]","declared_features":"[\"aes-gcm\", \"base64\", \"hkdf\", \"hmac\", \"key-expansion\", \"percent-encode\", \"percent-encoding\", \"private\", \"rand\", \"secure\", \"sha2\", \"signed\", \"subtle\"]","target":17883862002600103897,"profile":1369601567987815722,"path":17582532990006988194,"deps":[[5398981501050481332,"version_check",false,7200096590859223007]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/cookie-52dbde13debae4dc/dep-build-script-build-script-build","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"percent-encode\", \"percent-encoding\"]",
+  "declared_features": "[\"aes-gcm\", \"base64\", \"hkdf\", \"hmac\", \"key-expansion\", \"percent-encode\", \"percent-encoding\", \"private\", \"rand\", \"secure\", \"sha2\", \"signed\", \"subtle\"]",
+  "target": 17883862002600103897,
+  "profile": 1369601567987815722,
+  "path": 17582532990006988194,
+  "deps": [[5398981501050481332, "version_check", false, 7200096590859223007]],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/cookie-52dbde13debae4dc/dep-build-script-build-script-build",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

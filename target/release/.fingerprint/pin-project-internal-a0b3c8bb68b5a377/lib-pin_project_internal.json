@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[]","target":777236694398023488,"profile":8375198932534324538,"path":353619745409088126,"deps":[[3060637413840920116,"proc_macro2",false,12145970529213610441],[17990358020177143287,"quote",false,11748299033473964049],[18149961000318489080,"syn",false,18283567963382729359]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/pin-project-internal-a0b3c8bb68b5a377/dep-lib-pin_project_internal","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[]",
+  "target": 777236694398023488,
+  "profile": 8375198932534324538,
+  "path": 353619745409088126,
+  "deps": [
+    [3060637413840920116, "proc_macro2", false, 12145970529213610441],
+    [17990358020177143287, "quote", false, 11748299033473964049],
+    [18149961000318489080, "syn", false, 18283567963382729359]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/pin-project-internal-a0b3c8bb68b5a377/dep-lib-pin_project_internal",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[]","target":695003556747458393,"profile":1369601567987815722,"path":101407660970996935,"deps":[[17990358020177143287,"quote",false,11748299033473964049],[18149961000318489080,"syn",false,18283567963382729359]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/actix-macros-6d70c5b692bd88e0/dep-lib-actix_macros","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[]",
+  "target": 695003556747458393,
+  "profile": 1369601567987815722,
+  "path": 101407660970996935,
+  "deps": [
+    [17990358020177143287, "quote", false, 11748299033473964049],
+    [18149961000318489080, "syn", false, 18283567963382729359]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/actix-macros-6d70c5b692bd88e0/dep-lib-actix_macros",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

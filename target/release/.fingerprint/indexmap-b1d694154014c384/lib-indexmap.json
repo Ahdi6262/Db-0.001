@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[\"default\", \"serde\", \"std\"]","declared_features":"[\"arbitrary\", \"borsh\", \"default\", \"quickcheck\", \"rayon\", \"serde\", \"std\", \"test_debug\"]","target":10391229881554802429,"profile":14548950619909633236,"path":4083367863437669505,"deps":[[5230392855116717286,"equivalent",false,12190837543031357816],[9689903380558560274,"serde",false,14679447580432474782],[15922213196359695094,"hashbrown",false,17437060756758603248]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/indexmap-b1d694154014c384/dep-lib-indexmap","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"default\", \"serde\", \"std\"]",
+  "declared_features": "[\"arbitrary\", \"borsh\", \"default\", \"quickcheck\", \"rayon\", \"serde\", \"std\", \"test_debug\"]",
+  "target": 10391229881554802429,
+  "profile": 14548950619909633236,
+  "path": 4083367863437669505,
+  "deps": [
+    [5230392855116717286, "equivalent", false, 12190837543031357816],
+    [9689903380558560274, "serde", false, 14679447580432474782],
+    [15922213196359695094, "hashbrown", false, 17437060756758603248]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/indexmap-b1d694154014c384/dep-lib-indexmap",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[]","target":3552558796056091662,"profile":2241668132362809309,"path":2249926129996517136,"deps":[[11781824977070132858,"same_file",false,10968828401410192174]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/walkdir-7d653d492ef62c9c/dep-lib-walkdir","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[]",
+  "target": 3552558796056091662,
+  "profile": 2241668132362809309,
+  "path": 2249926129996517136,
+  "deps": [[11781824977070132858, "same_file", false, 10968828401410192174]],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/walkdir-7d653d492ef62c9c/dep-lib-walkdir",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

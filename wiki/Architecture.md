@@ -76,6 +76,7 @@ The API server exposes endpoints for client applications to interact with the sy
 Each database type has a dedicated adapter that translates between the unified API and the specific database protocol. The adapters implement a common interface to ensure consistent behavior.
 
 Supported database types include:
+
 - SQL databases (PostgreSQL, MySQL)
 - NoSQL databases (MongoDB, Redis, Cassandra)
 - Graph databases (Neo4j)
@@ -128,6 +129,7 @@ The database abstraction layer provides a unified interface for working with dif
 ### Common Interface
 
 All database adapters implement a common interface with methods like:
+
 - `connect()`: Connect to the database
 - `disconnect()`: Disconnect from the database
 - `query()`: Execute a query
@@ -200,14 +202,17 @@ The system is designed for horizontal and vertical scaling:
 To extend the system:
 
 1. **Add a new database adapter**:
+
    - Create a new adapter that implements the common interface
    - Register the adapter with the system
 
 2. **Add a new matrix storage backend**:
+
    - Implement the storage interface
    - Register the storage backend with the Infinite Matrix
 
 3. **Add custom middleware**:
+
    - Create a middleware function
    - Register the middleware with the API server
 

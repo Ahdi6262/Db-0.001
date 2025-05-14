@@ -1,1 +1,30 @@
-{"rustc":8750902384292223123,"features":"[\"default\"]","declared_features":"[\"default\", \"io-uring\", \"tokio-uring\"]","target":7486425883630722659,"profile":18362114993302267858,"path":5581217905034231565,"deps":[[1208444357745175282,"mio",false,4019990725120235661],[3064692270587553479,"actix_service",false,10681442875834248210],[5384016313853579615,"actix_utils",false,13867470655759355549],[7303982924001358866,"tokio",false,5653388865917803533],[7620660491849607393,"futures_core",false,7931606739770259172],[8431740714262224655,"socket2",false,9898153983295744609],[8606274917505247608,"tracing",false,18066335795796719733],[10104623419230226685,"actix_rt",false,5163315870592172537],[10629569228670356391,"futures_util",false,12111964949946243057]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/actix-server-75d160bd040abd62/dep-lib-actix_server","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"default\"]",
+  "declared_features": "[\"default\", \"io-uring\", \"tokio-uring\"]",
+  "target": 7486425883630722659,
+  "profile": 18362114993302267858,
+  "path": 5581217905034231565,
+  "deps": [
+    [1208444357745175282, "mio", false, 4019990725120235661],
+    [3064692270587553479, "actix_service", false, 10681442875834248210],
+    [5384016313853579615, "actix_utils", false, 13867470655759355549],
+    [7303982924001358866, "tokio", false, 5653388865917803533],
+    [7620660491849607393, "futures_core", false, 7931606739770259172],
+    [8431740714262224655, "socket2", false, 9898153983295744609],
+    [8606274917505247608, "tracing", false, 18066335795796719733],
+    [10104623419230226685, "actix_rt", false, 5163315870592172537],
+    [10629569228670356391, "futures_util", false, 12111964949946243057]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/actix-server-75d160bd040abd62/dep-lib-actix_server",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

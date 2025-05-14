@@ -103,6 +103,7 @@ Database adapters provide the translation layer between the unified API and spec
 Retrieves the current system configuration.
 
 **Response**:
+
 ```json
 {
   "version": "1.0.0",
@@ -126,6 +127,7 @@ Retrieves the current system configuration.
 Updates a section of the system configuration.
 
 **Request**:
+
 ```json
 {
   "section": "performance",
@@ -137,6 +139,7 @@ Updates a section of the system configuration.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -151,6 +154,7 @@ Updates a section of the system configuration.
 Registers a custom database adapter.
 
 **Request**:
+
 ```json
 {
   "name": "custom-db",
@@ -162,6 +166,7 @@ Registers a custom database adapter.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -177,6 +182,7 @@ Registers a custom database adapter.
 Creates a new database connection.
 
 **Request**:
+
 ```json
 {
   "name": "my-postgres",
@@ -186,6 +192,7 @@ Creates a new database connection.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -199,6 +206,7 @@ Creates a new database connection.
 Lists all registered connections.
 
 **Response**:
+
 ```json
 {
   "connections": [
@@ -219,6 +227,7 @@ Lists all registered connections.
 Creates a new matrix.
 
 **Request**:
+
 ```json
 {
   "name": "my-matrix",
@@ -233,6 +242,7 @@ Creates a new matrix.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -246,6 +256,7 @@ Creates a new matrix.
 Gets information about a matrix.
 
 **Response**:
+
 ```json
 {
   "dimensions": [...],
@@ -264,6 +275,7 @@ Gets information about a matrix.
 Sets a value in a matrix.
 
 **Request**:
+
 ```json
 {
   "coordinates": [10, 20, 30],
@@ -272,6 +284,7 @@ Sets a value in a matrix.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -284,9 +297,11 @@ Sets a value in a matrix.
 Gets a value from a matrix.
 
 **Query Parameters**:
+
 - `coordinates`: Comma-separated list of coordinates (e.g., `10,20,30`)
 
 **Response**:
+
 ```json
 {
   "coordinates": [10, 20, 30],
@@ -299,6 +314,7 @@ Gets a value from a matrix.
 Queries values in a matrix.
 
 **Request**:
+
 ```json
 {
   "query": {
@@ -310,6 +326,7 @@ Queries values in a matrix.
 ```
 
 **Response**:
+
 ```json
 {
   "results": [
@@ -327,6 +344,7 @@ Queries values in a matrix.
 Adds a dimension to a matrix.
 
 **Request**:
+
 ```json
 {
   "name": "time",
@@ -337,6 +355,7 @@ Adds a dimension to a matrix.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -350,6 +369,7 @@ Adds a dimension to a matrix.
 Removes a dimension from a matrix.
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -362,6 +382,7 @@ Removes a dimension from a matrix.
 Resizes a matrix.
 
 **Request**:
+
 ```json
 {
   "dimensions": [
@@ -372,6 +393,7 @@ Resizes a matrix.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -385,6 +407,7 @@ Resizes a matrix.
 Changes the storage type for a matrix.
 
 **Request**:
+
 ```json
 {
   "storageType": "database",
@@ -396,6 +419,7 @@ Changes the storage type for a matrix.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -410,6 +434,7 @@ Changes the storage type for a matrix.
 Creates a record in a collection.
 
 **Request**:
+
 ```json
 {
   "collection": "users",
@@ -421,6 +446,7 @@ Creates a record in a collection.
 ```
 
 **Response**:
+
 ```json
 {
   "id": "123",
@@ -435,9 +461,11 @@ Creates a record in a collection.
 Gets a record by ID.
 
 **Query Parameters**:
+
 - `collection`: The collection/table name
 
 **Response**:
+
 ```json
 {
   "id": "123",
@@ -452,6 +480,7 @@ Gets a record by ID.
 Updates a record.
 
 **Request**:
+
 ```json
 {
   "collection": "users",
@@ -463,6 +492,7 @@ Updates a record.
 ```
 
 **Response**:
+
 ```json
 {
   "id": "123",
@@ -478,9 +508,11 @@ Updates a record.
 Deletes a record.
 
 **Query Parameters**:
+
 - `collection`: The collection/table name
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -493,6 +525,7 @@ Deletes a record.
 Queries records in a collection.
 
 **Request**:
+
 ```json
 {
   "collection": "users",
@@ -505,6 +538,7 @@ Queries records in a collection.
 ```
 
 **Response**:
+
 ```json
 {
   "results": [...],
@@ -521,6 +555,7 @@ Queries records in a collection.
 Executes an aggregation pipeline.
 
 **Request**:
+
 ```json
 {
   "collection": "orders",
@@ -532,6 +567,7 @@ Executes an aggregation pipeline.
 ```
 
 **Response**:
+
 ```json
 {
   "results": [...]
@@ -543,6 +579,7 @@ Executes an aggregation pipeline.
 Executes a raw SQL query.
 
 **Request**:
+
 ```json
 {
   "sql": "SELECT * FROM users WHERE name LIKE $1",
@@ -551,6 +588,7 @@ Executes a raw SQL query.
 ```
 
 **Response**:
+
 ```json
 {
   "results": [...],
@@ -563,6 +601,7 @@ Executes a raw SQL query.
 Executes a Cypher query.
 
 **Request**:
+
 ```json
 {
   "query": "MATCH (user:User)-[:PURCHASED]->(product:Product) RETURN user, product",
@@ -571,6 +610,7 @@ Executes a Cypher query.
 ```
 
 **Response**:
+
 ```json
 {
   "results": [...]
@@ -585,14 +625,14 @@ The main client class for interacting with the API.
 
 ```javascript
 const client = new UnifiedDBClient({
-  baseUrl: 'http://localhost:8000',
-  defaultDbType: 'postgresql',
-  defaultDbName: 'postgres',
+  baseUrl: "http://localhost:8000",
+  defaultDbType: "postgresql",
+  defaultDbName: "postgres",
   auth: {
-    type: 'bearer',
-    token: 'your-auth-token'
+    type: "bearer",
+    token: "your-auth-token",
   },
-  debug: true
+  debug: true,
 });
 ```
 
@@ -603,8 +643,8 @@ const client = new UnifiedDBClient({
 Gets a database interface for the specified database type.
 
 ```javascript
-const postgresql = client.database('postgresql', 'postgres');
-const mongodb = client.database('mongodb', 'mydb');
+const postgresql = client.database("postgresql", "postgres");
+const mongodb = client.database("mongodb", "mydb");
 ```
 
 ##### matrix(name)
@@ -612,7 +652,7 @@ const mongodb = client.database('mongodb', 'mydb');
 Gets a matrix interface.
 
 ```javascript
-const matrix = client.matrix('my-matrix');
+const matrix = client.matrix("my-matrix");
 ```
 
 ##### async getDatabases()
@@ -636,114 +676,113 @@ const health = await client.getHealth();
 #### SQL Database Interface
 
 ```javascript
-const postgres = client.database('postgresql', 'postgres');
+const postgres = client.database("postgresql", "postgres");
 
 // Create a record
-const newUser = await postgres.createRecord('users', {
-  name: 'John Doe',
-  email: 'john@example.com'
+const newUser = await postgres.createRecord("users", {
+  name: "John Doe",
+  email: "john@example.com",
 });
 
 // Get a record
-const user = await postgres.getRecord('users', 123);
+const user = await postgres.getRecord("users", 123);
 
 // Update a record
-await postgres.updateRecord('users', 123, {
-  name: 'John Doe',
-  email: 'john.updated@example.com'
+await postgres.updateRecord("users", 123, {
+  name: "John Doe",
+  email: "john.updated@example.com",
 });
 
 // Delete a record
-await postgres.deleteRecord('users', 123);
+await postgres.deleteRecord("users", 123);
 
 // Query records
-const users = await postgres.queryRecords('users', 
-  { name: 'John' }, 
-  { limit: 10, offset: 0, sortBy: 'created', sortOrder: 'desc' }
+const users = await postgres.queryRecords(
+  "users",
+  { name: "John" },
+  { limit: 10, offset: 0, sortBy: "created", sortOrder: "desc" },
 );
 
 // Execute raw SQL
 const results = await postgres.executeRawQuery(
-  'SELECT * FROM users WHERE name LIKE $1',
-  ['John%']
+  "SELECT * FROM users WHERE name LIKE $1",
+  ["John%"],
 );
 ```
 
 #### Document Database Interface
 
 ```javascript
-const mongodb = client.database('mongodb', 'mydb');
+const mongodb = client.database("mongodb", "mydb");
 
 // Document databases have all SQL methods plus:
-const results = await mongodb.aggregate('orders', [
-  { $match: { status: 'completed' } },
-  { $group: { _id: '$customer', total: { $sum: '$amount' } } }
+const results = await mongodb.aggregate("orders", [
+  { $match: { status: "completed" } },
+  { $group: { _id: "$customer", total: { $sum: "$amount" } } },
 ]);
 
 // Upsert a record
-await mongodb.upsertRecord('users', 
-  { email: 'john@example.com' }, 
-  { name: 'John Doe', email: 'john@example.com' }
+await mongodb.upsertRecord(
+  "users",
+  { email: "john@example.com" },
+  { name: "John Doe", email: "john@example.com" },
 );
 ```
 
 #### Key-Value Database Interface
 
 ```javascript
-const redis = client.database('redis', 'cache');
+const redis = client.database("redis", "cache");
 
 // Set a value
-await redis.set('user:123', { name: 'John Doe' }, { expiry: 3600 });
+await redis.set("user:123", { name: "John Doe" }, { expiry: 3600 });
 
 // Get a value
-const user = await redis.get('user:123');
+const user = await redis.get("user:123");
 
 // Delete a value
-await redis.delete('user:123');
+await redis.delete("user:123");
 
 // Increment a value
-const newCount = await redis.increment('visitor_count', 1);
+const newCount = await redis.increment("visitor_count", 1);
 ```
 
 #### Graph Database Interface
 
 ```javascript
-const neo4j = client.database('neo4j', 'graph');
+const neo4j = client.database("neo4j", "graph");
 
 // Create a node
-const user = await neo4j.createNode('User', {
-  name: 'John Doe',
-  email: 'john@example.com'
+const user = await neo4j.createNode("User", {
+  name: "John Doe",
+  email: "john@example.com",
 });
 
 // Create a relationship
-await neo4j.createRelationship(
-  user.id,
-  product.id,
-  'PURCHASED',
-  { date: '2023-05-14' }
-);
+await neo4j.createRelationship(user.id, product.id, "PURCHASED", {
+  date: "2023-05-14",
+});
 
 // Execute a Cypher query
 const results = await neo4j.query(
-  'MATCH (user:User)-[:PURCHASED]->(product:Product) RETURN user, product'
+  "MATCH (user:User)-[:PURCHASED]->(product:Product) RETURN user, product",
 );
 ```
 
 #### Time Series Database Interface
 
 ```javascript
-const influxdb = client.database('influxdb', 'metrics');
+const influxdb = client.database("influxdb", "metrics");
 
 // Write points
-await influxdb.writePoints('cpu_usage', [
-  { time: '2023-05-14T12:34:56Z', value: 0.75, host: 'server1' },
-  { time: '2023-05-14T12:34:57Z', value: 0.80, host: 'server1' }
+await influxdb.writePoints("cpu_usage", [
+  { time: "2023-05-14T12:34:56Z", value: 0.75, host: "server1" },
+  { time: "2023-05-14T12:34:57Z", value: 0.8, host: "server1" },
 ]);
 
 // Query data
 const results = await influxdb.query(
-  'from(bucket:"metrics") |> range(start: -1h) |> filter(fn: (r) => r._measurement == "cpu_usage")'
+  'from(bucket:"metrics") |> range(start: -1h) |> filter(fn: (r) => r._measurement == "cpu_usage")',
 );
 ```
 
@@ -771,13 +810,13 @@ const results = await qdrant.search('embeddings', [...], 10);
 ### Matrix Interface
 
 ```javascript
-const matrix = client.matrix('my-matrix');
+const matrix = client.matrix("my-matrix");
 
 // Get matrix info
 const info = await matrix.getInfo();
 
 // Set a value
-await matrix.setValue([10, 20, 30], { data: 'Hello, Matrix!' });
+await matrix.setValue([10, 20, 30], { data: "Hello, Matrix!" });
 
 // Get a value
 const value = await matrix.getValue([10, 20, 30]);
@@ -786,30 +825,30 @@ const value = await matrix.getValue([10, 20, 30]);
 const results = await matrix.query({
   x: { min: 5, max: 15 },
   y: 20,
-  z: { min: 25, max: 35 }
+  z: { min: 25, max: 35 },
 });
 
 // Add a dimension
 await matrix.addDimension({
-  name: 'time',
-  type: 'numeric',
+  name: "time",
+  type: "numeric",
   min: 0,
-  max: 1000
+  max: 1000,
 });
 
 // Remove a dimension
-await matrix.removeDimension('time');
+await matrix.removeDimension("time");
 
 // Resize the matrix
 await matrix.resize([
-  { name: 'x', min: 0, max: 200 },
-  { name: 'y', min: 0, max: 200 }
+  { name: "x", min: 0, max: 200 },
+  { name: "y", min: 0, max: 200 },
 ]);
 
 // Change storage type
-await matrix.changeStorage('database', {
-  collection: 'matrix_data',
-  dbType: 'mongodb'
+await matrix.changeStorage("database", {
+  collection: "matrix_data",
+  dbType: "mongodb",
 });
 ```
 
@@ -858,8 +897,7 @@ Each dimension has metadata including name, type, minimum and maximum values:
 Coordinates are represented as arrays of numbers, with each element corresponding to a dimension:
 
 ```javascript
-[10, 20, 30] // 3D coordinates
-[10, 20, 30, 40] // 4D coordinates
+[10, 20, 30][(10, 20, 30, 40)]; // 3D coordinates // 4D coordinates
 ```
 
 #### Storage Types
@@ -931,6 +969,7 @@ The system includes connectors for various database types. Each connector implem
 The PostgreSQL connector uses the `pg` package and connection pooling for efficient database operations.
 
 **Features**:
+
 - Connection pooling
 - Parameterized queries
 - Transaction support
@@ -941,6 +980,7 @@ The PostgreSQL connector uses the `pg` package and connection pooling for effici
 The MongoDB connector uses the official MongoDB Node.js driver.
 
 **Features**:
+
 - Collection management
 - CRUD operations
 - Aggregation pipeline support
@@ -1011,22 +1051,22 @@ Store and analyze financial time-series data using the Infinite Matrix:
 
 ```javascript
 // Create a matrix for financial data
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'financial-data',
+    name: "financial-data",
     dimensions: [
-      { name: 'time', type: 'numeric', min: 0, max: 1000 },
-      { name: 'symbol', type: 'numeric', min: 0, max: 1000 },
-      { name: 'metric', type: 'numeric', min: 0, max: 10 }
-    ]
-  })
+      { name: "time", type: "numeric", min: 0, max: 1000 },
+      { name: "symbol", type: "numeric", min: 0, max: 1000 },
+      { name: "metric", type: "numeric", min: 0, max: 10 },
+    ],
+  }),
 });
 
-const matrix = client.matrix('financial-data');
+const matrix = client.matrix("financial-data");
 
 // Store price data
-await matrix.setValue([1, 100, 0], { price: 150.50 });
+await matrix.setValue([1, 100, 0], { price: 150.5 });
 await matrix.setValue([2, 100, 0], { price: 152.75 });
 
 // Store volume data
@@ -1037,7 +1077,7 @@ await matrix.setValue([2, 100, 1], { volume: 12000 });
 const priceData = await matrix.query({
   symbol: 100,
   metric: 0,
-  time: { min: 0, max: 10 }
+  time: { min: 0, max: 10 },
 });
 ```
 
@@ -1047,19 +1087,19 @@ Track user activity across multiple dimensions:
 
 ```javascript
 // Create a matrix for user activity
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'user-activity',
+    name: "user-activity",
     dimensions: [
-      { name: 'user', type: 'numeric', min: 0, max: 10000 },
-      { name: 'action', type: 'numeric', min: 0, max: 100 },
-      { name: 'day', type: 'numeric', min: 0, max: 365 }
-    ]
-  })
+      { name: "user", type: "numeric", min: 0, max: 10000 },
+      { name: "action", type: "numeric", min: 0, max: 100 },
+      { name: "day", type: "numeric", min: 0, max: 365 },
+    ],
+  }),
 });
 
-const matrix = client.matrix('user-activity');
+const matrix = client.matrix("user-activity");
 
 // Record user actions
 await matrix.setValue([123, 1, 1], { count: 5 }); // User 123, action 1 (login), day 1
@@ -1067,10 +1107,10 @@ await matrix.setValue([123, 2, 1], { count: 10 }); // User 123, action 2 (page v
 
 // Add a new dimension for location
 await matrix.addDimension({
-  name: 'location',
-  type: 'numeric',
+  name: "location",
+  type: "numeric",
   min: 0,
-  max: 1000
+  max: 1000,
 });
 
 // Record user actions with location
@@ -1079,7 +1119,7 @@ await matrix.setValue([123, 1, 2, 42], { count: 3 }); // User 123, action 1, day
 // Query user activity by location
 const locationActivity = await matrix.query({
   location: 42,
-  day: { min: 0, max: 10 }
+  day: { min: 0, max: 10 },
 });
 ```
 

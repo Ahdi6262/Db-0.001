@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[\"std\"]","declared_features":"[\"default\", \"num_cpus\", \"std\", \"thread-pool\"]","target":11409328241454404632,"profile":17467636112133979524,"path":3502357076808439861,"deps":[[7620660491849607393,"futures_core",false,7931606739770259172],[10629569228670356391,"futures_util",false,12111964949946243057],[16240732885093539806,"futures_task",false,4937583783729054295]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/futures-executor-819e3ed6689d9ce6/dep-lib-futures_executor","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"std\"]",
+  "declared_features": "[\"default\", \"num_cpus\", \"std\", \"thread-pool\"]",
+  "target": 11409328241454404632,
+  "profile": 17467636112133979524,
+  "path": 3502357076808439861,
+  "deps": [
+    [7620660491849607393, "futures_core", false, 7931606739770259172],
+    [10629569228670356391, "futures_util", false, 12111964949946243057],
+    [16240732885093539806, "futures_task", false, 4937583783729054295]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/futures-executor-819e3ed6689d9ce6/dep-lib-futures_executor",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[]","target":1927766717825819639,"profile":16219553511755397109,"path":7844085549402668798,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/impl-more-89e63b1f28bb2be0/dep-lib-impl_more","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[]",
+  "target": 1927766717825819639,
+  "profile": 16219553511755397109,
+  "path": 7844085549402668798,
+  "deps": [],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/impl-more-89e63b1f28bb2be0/dep-lib-impl_more",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

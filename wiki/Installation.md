@@ -30,6 +30,7 @@ npm install
 ```
 
 This will install all required Node.js dependencies, including:
+
 - express
 - cors
 - pg (PostgreSQL client)
@@ -125,21 +126,21 @@ You should see a response indicating the health status of the server and connect
 The client library is included in the repository. To use it in your application:
 
 ```javascript
-const { UnifiedDBClient } = require('./unified_db_client');
+const { UnifiedDBClient } = require("./unified_db_client");
 
 // Create a client instance
 const client = new UnifiedDBClient({
-  baseUrl: 'http://localhost:8000',
-  debug: true
+  baseUrl: "http://localhost:8000",
+  debug: true,
 });
 
 // Test the connection
 async function testConnection() {
   try {
     const health = await client.getHealth();
-    console.log('Connected to Unified Database API:', health);
+    console.log("Connected to Unified Database API:", health);
   } catch (error) {
-    console.error('Failed to connect:', error);
+    console.error("Failed to connect:", error);
   }
 }
 
@@ -159,6 +160,7 @@ Failed to connect to PostgreSQL: ECONNREFUSED
 ```
 
 Check that:
+
 1. PostgreSQL is running
 2. Your DATABASE_URL is correct
 3. Your PostgreSQL user has appropriate permissions
@@ -172,6 +174,7 @@ Failed to connect to MongoDB: MongoError: failed to connect to server
 ```
 
 Check that:
+
 1. MongoDB is running
 2. Your MONGODB_URI is correct
 3. Authentication details are correct if MongoDB requires authentication

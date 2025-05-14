@@ -1,1 +1,29 @@
-{"rustc":8750902384292223123,"features":"[\"compiled_data\"]","declared_features":"[\"alloc\", \"compiled_data\", \"datagen\", \"default\", \"serde\", \"unicode_bidi\"]","target":12882061015678277883,"profile":1369601567987815722,"path":12923960760111344407,"deps":[[577007972892873560,"icu_locale_core",false,18225631432818001506],[1537006514548139957,"zerovec",false,15560798272313456339],[2094002304596326048,"zerotrie",false,16637821811604007680],[2832017603645310680,"icu_collections",false,17473795587185554434],[5298260564258778412,"displaydoc",false,16050195503856799702],[7728845759111398099,"icu_provider",false,8240301015022358202],[9493021813450181186,"potential_utf",false,7150287215967687116],[10344109979159805477,"icu_properties_data",false,8016460541816218008]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/icu_properties-981d774c9195b0e3/dep-lib-icu_properties","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"compiled_data\"]",
+  "declared_features": "[\"alloc\", \"compiled_data\", \"datagen\", \"default\", \"serde\", \"unicode_bidi\"]",
+  "target": 12882061015678277883,
+  "profile": 1369601567987815722,
+  "path": 12923960760111344407,
+  "deps": [
+    [577007972892873560, "icu_locale_core", false, 18225631432818001506],
+    [1537006514548139957, "zerovec", false, 15560798272313456339],
+    [2094002304596326048, "zerotrie", false, 16637821811604007680],
+    [2832017603645310680, "icu_collections", false, 17473795587185554434],
+    [5298260564258778412, "displaydoc", false, 16050195503856799702],
+    [7728845759111398099, "icu_provider", false, 8240301015022358202],
+    [9493021813450181186, "potential_utf", false, 7150287215967687116],
+    [10344109979159805477, "icu_properties_data", false, 8016460541816218008]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/icu_properties-981d774c9195b0e3/dep-lib-icu_properties",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

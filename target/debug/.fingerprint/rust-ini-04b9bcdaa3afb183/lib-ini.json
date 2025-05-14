@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[\"default\"]","declared_features":"[\"brackets-in-section-names\", \"case-insensitive\", \"default\", \"inline-comment\", \"unicase\"]","target":12750131633454462832,"profile":15657897354478470176,"path":13845162894883694348,"deps":[[10411997081178400487,"cfg_if",false,60945050129546989],[13365263342535927024,"ordered_multimap",false,5657258353988777286]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/rust-ini-04b9bcdaa3afb183/dep-lib-ini","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"default\"]",
+  "declared_features": "[\"brackets-in-section-names\", \"case-insensitive\", \"default\", \"inline-comment\", \"unicase\"]",
+  "target": 12750131633454462832,
+  "profile": 15657897354478470176,
+  "path": 13845162894883694348,
+  "deps": [
+    [10411997081178400487, "cfg_if", false, 60945050129546989],
+    [13365263342535927024, "ordered_multimap", false, 5657258353988777286]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/rust-ini-04b9bcdaa3afb183/dep-lib-ini",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

@@ -1,1 +1,25 @@
-{"rustc":8750902384292223123,"features":"[\"compat-routing-macros-force-pub\"]","declared_features":"[\"compat-routing-macros-force-pub\", \"default\"]","target":3358744162673330276,"profile":1369601567987815722,"path":5359243401839027904,"deps":[[3060637413840920116,"proc_macro2",false,12145970529213610441],[5842353030919857658,"actix_router",false,5650359745670663112],[17990358020177143287,"quote",false,11748299033473964049],[18149961000318489080,"syn",false,18283567963382729359]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/actix-web-codegen-9e98393cca91f0f9/dep-lib-actix_web_codegen","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"compat-routing-macros-force-pub\"]",
+  "declared_features": "[\"compat-routing-macros-force-pub\", \"default\"]",
+  "target": 3358744162673330276,
+  "profile": 1369601567987815722,
+  "path": 5359243401839027904,
+  "deps": [
+    [3060637413840920116, "proc_macro2", false, 12145970529213610441],
+    [5842353030919857658, "actix_router", false, 5650359745670663112],
+    [17990358020177143287, "quote", false, 11748299033473964049],
+    [18149961000318489080, "syn", false, 18283567963382729359]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/actix-web-codegen-9e98393cca91f0f9/dep-lib-actix_web_codegen",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

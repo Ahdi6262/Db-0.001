@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[\"std\"]","declared_features":"[\"default\", \"os_rng\", \"serde\", \"std\"]","target":12152606625246618204,"profile":15657897354478470176,"path":10783743005032499411,"deps":[[12919011715531272606,"ppv_lite86",false,10099676098320263242],[13135315962794364551,"rand_core",false,2012024067807196584]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/rand_chacha-5437d9cb69b93657/dep-lib-rand_chacha","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"std\"]",
+  "declared_features": "[\"default\", \"os_rng\", \"serde\", \"std\"]",
+  "target": 12152606625246618204,
+  "profile": 15657897354478470176,
+  "path": 10783743005032499411,
+  "deps": [
+    [12919011715531272606, "ppv_lite86", false, 10099676098320263242],
+    [13135315962794364551, "rand_core", false, 2012024067807196584]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/rand_chacha-5437d9cb69b93657/dep-lib-rand_chacha",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[\"deflate\", \"flate2\"]","declared_features":"[\"aes\", \"aes-crypto\", \"bzip2\", \"constant_time_eq\", \"default\", \"deflate\", \"deflate-miniz\", \"deflate-zlib\", \"flate2\", \"hmac\", \"pbkdf2\", \"sha1\", \"time\", \"unreserved\", \"zstd\"]","target":17702904954890444465,"profile":1369601567987815722,"path":2510371016209161622,"deps":[[3712811570531045576,"byteorder",false,4312265882475208929],[5466618496199522463,"crc32fast",false,6610520261717141576],[10563170702865159712,"flate2",false,16356677159087158653]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/zip-539e35fe895f6a99/dep-lib-zip","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"deflate\", \"flate2\"]",
+  "declared_features": "[\"aes\", \"aes-crypto\", \"bzip2\", \"constant_time_eq\", \"default\", \"deflate\", \"deflate-miniz\", \"deflate-zlib\", \"flate2\", \"hmac\", \"pbkdf2\", \"sha1\", \"time\", \"unreserved\", \"zstd\"]",
+  "target": 17702904954890444465,
+  "profile": 1369601567987815722,
+  "path": 2510371016209161622,
+  "deps": [
+    [3712811570531045576, "byteorder", false, 4312265882475208929],
+    [5466618496199522463, "crc32fast", false, 6610520261717141576],
+    [10563170702865159712, "flate2", false, 16356677159087158653]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/zip-539e35fe895f6a99/dep-lib-zip",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}
