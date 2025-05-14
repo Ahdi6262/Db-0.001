@@ -1,1 +1,37 @@
-{"rustc":8750902384292223123,"features":"[\"_rt-tokio\", \"_tls-rustls\", \"default\", \"json\", \"migrate\", \"postgres\", \"sqlx-postgres\", \"tokio\", \"uuid\"]","declared_features":"[\"_rt-async-std\", \"_rt-tokio\", \"_tls-native-tls\", \"_tls-rustls\", \"async-std\", \"bigdecimal\", \"bit-vec\", \"chrono\", \"default\", \"ipnetwork\", \"json\", \"mac_address\", \"migrate\", \"mysql\", \"postgres\", \"rust_decimal\", \"sqlite\", \"sqlx-mysql\", \"sqlx-postgres\", \"sqlx-sqlite\", \"time\", \"tokio\", \"uuid\"]","target":961973412475639632,"profile":2225463790103693989,"path":15817175867286351186,"deps":[[530211389790465181,"hex",false,6066287606349246199],[996810380461694889,"sqlx_core",false,10985628814704162280],[1441306149310335789,"tempfile",false,8210717889947249587],[2713742371683562785,"syn",false,13136255938041090596],[3060637413840920116,"proc_macro2",false,12000827523751421207],[3150220818285335163,"url",false,1974947429739553097],[3405707034081185165,"dotenvy",false,15400604723311918423],[3722963349756955755,"once_cell",false,1710606353348028963],[7303982924001358866,"tokio",false,11949759237674116565],[8045585743974080694,"heck",false,16497525389415529268],[9689903380558560274,"serde",false,17636365454099479695],[9857275760291862238,"sha2",false,15610519154749499807],[12170264697963848012,"either",false,784148487239699706],[15367738274754116744,"serde_json",false,12394396545423443309],[15634168271133386882,"sqlx_postgres",false,14786588322177065283],[17990358020177143287,"quote",false,6322218562564504116]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/sqlx-macros-core-5e20e7bcac3f1e9c/dep-lib-sqlx_macros_core","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"_rt-tokio\", \"_tls-rustls\", \"default\", \"json\", \"migrate\", \"postgres\", \"sqlx-postgres\", \"tokio\", \"uuid\"]",
+  "declared_features": "[\"_rt-async-std\", \"_rt-tokio\", \"_tls-native-tls\", \"_tls-rustls\", \"async-std\", \"bigdecimal\", \"bit-vec\", \"chrono\", \"default\", \"ipnetwork\", \"json\", \"mac_address\", \"migrate\", \"mysql\", \"postgres\", \"rust_decimal\", \"sqlite\", \"sqlx-mysql\", \"sqlx-postgres\", \"sqlx-sqlite\", \"time\", \"tokio\", \"uuid\"]",
+  "target": 961973412475639632,
+  "profile": 2225463790103693989,
+  "path": 15817175867286351186,
+  "deps": [
+    [530211389790465181, "hex", false, 6066287606349246199],
+    [996810380461694889, "sqlx_core", false, 10985628814704162280],
+    [1441306149310335789, "tempfile", false, 8210717889947249587],
+    [2713742371683562785, "syn", false, 13136255938041090596],
+    [3060637413840920116, "proc_macro2", false, 12000827523751421207],
+    [3150220818285335163, "url", false, 1974947429739553097],
+    [3405707034081185165, "dotenvy", false, 15400604723311918423],
+    [3722963349756955755, "once_cell", false, 1710606353348028963],
+    [7303982924001358866, "tokio", false, 11949759237674116565],
+    [8045585743974080694, "heck", false, 16497525389415529268],
+    [9689903380558560274, "serde", false, 17636365454099479695],
+    [9857275760291862238, "sha2", false, 15610519154749499807],
+    [12170264697963848012, "either", false, 784148487239699706],
+    [15367738274754116744, "serde_json", false, 12394396545423443309],
+    [15634168271133386882, "sqlx_postgres", false, 14786588322177065283],
+    [17990358020177143287, "quote", false, 6322218562564504116]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/sqlx-macros-core-5e20e7bcac3f1e9c/dep-lib-sqlx_macros_core",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

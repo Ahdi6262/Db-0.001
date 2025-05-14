@@ -1,1 +1,25 @@
-{"rustc":8750902384292223123,"features":"[\"actix_extras\", \"default\"]","declared_features":"[\"actix_extras\", \"auto_into_responses\", \"axum_extras\", \"chrono\", \"debug\", \"decimal\", \"default\", \"indexmap\", \"non_strict_integers\", \"openapi_extensions\", \"preserve_order\", \"preserve_path_order\", \"rc_schema\", \"repr\", \"rocket_extras\", \"serde_yaml\", \"smallvec\", \"time\", \"ulid\", \"uuid\", \"yaml\"]","target":2151970672667237190,"profile":2040997289075261528,"path":1806586595797323847,"deps":[[2682202505707635643,"utoipa_gen",false,17373854063612329508],[9689903380558560274,"serde",false,14679447580432474782],[14483812548788871374,"indexmap",false,1442631479470679871],[15367738274754116744,"serde_json",false,15832123426344106344]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/utoipa-d65c06f6783a7f86/dep-lib-utoipa","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"actix_extras\", \"default\"]",
+  "declared_features": "[\"actix_extras\", \"auto_into_responses\", \"axum_extras\", \"chrono\", \"debug\", \"decimal\", \"default\", \"indexmap\", \"non_strict_integers\", \"openapi_extensions\", \"preserve_order\", \"preserve_path_order\", \"rc_schema\", \"repr\", \"rocket_extras\", \"serde_yaml\", \"smallvec\", \"time\", \"ulid\", \"uuid\", \"yaml\"]",
+  "target": 2151970672667237190,
+  "profile": 2040997289075261528,
+  "path": 1806586595797323847,
+  "deps": [
+    [2682202505707635643, "utoipa_gen", false, 17373854063612329508],
+    [9689903380558560274, "serde", false, 14679447580432474782],
+    [14483812548788871374, "indexmap", false, 1442631479470679871],
+    [15367738274754116744, "serde_json", false, 15832123426344106344]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/utoipa-d65c06f6783a7f86/dep-lib-utoipa",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

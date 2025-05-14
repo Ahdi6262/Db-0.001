@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[\"default\", \"std\"]","declared_features":"[\"alloc\", \"default\", \"std\"]","target":13060062996227388079,"profile":15657897354478470176,"path":217459844114479523,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/base64-936cf0cf1969f3f7/dep-lib-base64","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"default\", \"std\"]",
+  "declared_features": "[\"alloc\", \"default\", \"std\"]",
+  "target": 13060062996227388079,
+  "profile": 15657897354478470176,
+  "path": 217459844114479523,
+  "deps": [],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/base64-936cf0cf1969f3f7/dep-lib-base64",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

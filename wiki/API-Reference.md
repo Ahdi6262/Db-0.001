@@ -18,6 +18,7 @@ This page provides a detailed reference of all endpoints available in the Unifie
 Retrieves the current system configuration.
 
 **Response:**
+
 ```json
 {
   "version": "1.0.0",
@@ -65,6 +66,7 @@ Retrieves the current system configuration.
 Updates a section of the system configuration.
 
 **Request:**
+
 ```json
 {
   "section": "performance",
@@ -76,6 +78,7 @@ Updates a section of the system configuration.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -90,6 +93,7 @@ Updates a section of the system configuration.
 Creates a new matrix.
 
 **Request:**
+
 ```json
 {
   "name": "my-matrix",
@@ -104,6 +108,7 @@ Creates a new matrix.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -122,6 +127,7 @@ Creates a new matrix.
 Gets information about a matrix.
 
 **Response:**
+
 ```json
 {
   "dimensions": [
@@ -151,6 +157,7 @@ Gets information about a matrix.
 Sets a value in a matrix.
 
 **Request:**
+
 ```json
 {
   "coordinates": [10, 20, 30],
@@ -159,6 +166,7 @@ Sets a value in a matrix.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -171,9 +179,11 @@ Sets a value in a matrix.
 Gets a value from a matrix.
 
 **Query Parameters:**
+
 - `coordinates`: Comma-separated list of coordinates (e.g., `10,20,30`)
 
 **Response:**
+
 ```json
 {
   "coordinates": [10, 20, 30],
@@ -186,6 +196,7 @@ Gets a value from a matrix.
 Queries values in a matrix.
 
 **Request:**
+
 ```json
 {
   "query": {
@@ -197,6 +208,7 @@ Queries values in a matrix.
 ```
 
 **Response:**
+
 ```json
 {
   "results": [
@@ -214,6 +226,7 @@ Queries values in a matrix.
 Adds a dimension to a matrix.
 
 **Request:**
+
 ```json
 {
   "name": "time",
@@ -225,6 +238,7 @@ Adds a dimension to a matrix.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -244,6 +258,7 @@ Adds a dimension to a matrix.
 Removes a dimension from a matrix.
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -256,6 +271,7 @@ Removes a dimension from a matrix.
 Resizes a matrix.
 
 **Request:**
+
 ```json
 {
   "dimensions": [
@@ -266,6 +282,7 @@ Resizes a matrix.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -282,6 +299,7 @@ Resizes a matrix.
 Changes the storage type for a matrix.
 
 **Request:**
+
 ```json
 {
   "storageType": "database",
@@ -293,6 +311,7 @@ Changes the storage type for a matrix.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -307,6 +326,7 @@ Changes the storage type for a matrix.
 Creates a record in a collection.
 
 **Request:**
+
 ```json
 {
   "collection": "users",
@@ -318,6 +338,7 @@ Creates a record in a collection.
 ```
 
 **Response:**
+
 ```json
 {
   "id": "123",
@@ -332,9 +353,11 @@ Creates a record in a collection.
 Gets a record by ID.
 
 **Query Parameters:**
+
 - `collection`: The collection/table name
 
 **Response:**
+
 ```json
 {
   "id": "123",
@@ -349,6 +372,7 @@ Gets a record by ID.
 Updates a record.
 
 **Request:**
+
 ```json
 {
   "collection": "users",
@@ -360,6 +384,7 @@ Updates a record.
 ```
 
 **Response:**
+
 ```json
 {
   "id": "123",
@@ -375,9 +400,11 @@ Updates a record.
 Deletes a record.
 
 **Query Parameters:**
+
 - `collection`: The collection/table name
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -390,6 +417,7 @@ Deletes a record.
 Queries records in a collection.
 
 **Request:**
+
 ```json
 {
   "collection": "users",
@@ -402,6 +430,7 @@ Queries records in a collection.
 ```
 
 **Response:**
+
 ```json
 {
   "results": [
@@ -425,6 +454,7 @@ Queries records in a collection.
 Gets the health status of the API and connected databases.
 
 **Response:**
+
 ```json
 {
   "status": "ok",
@@ -450,6 +480,7 @@ Gets the health status of the API and connected databases.
 Registers a custom database adapter.
 
 **Request:**
+
 ```json
 {
   "name": "custom-db",
@@ -461,6 +492,7 @@ Registers a custom database adapter.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -483,6 +515,7 @@ Registers a custom database adapter.
 Creates a new database connection.
 
 **Request:**
+
 ```json
 {
   "name": "my-postgres",
@@ -492,6 +525,7 @@ Creates a new database connection.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -509,6 +543,7 @@ Creates a new database connection.
 Lists all registered connections.
 
 **Response:**
+
 ```json
 {
   "connections": [

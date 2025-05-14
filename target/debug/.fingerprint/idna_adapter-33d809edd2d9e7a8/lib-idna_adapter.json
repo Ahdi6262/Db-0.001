@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[\"compiled_data\"]","declared_features":"[\"compiled_data\"]","target":9682399050268992880,"profile":15657897354478470176,"path":17270439653357577777,"deps":[[8921951865346409786,"icu_properties",false,11621037138823605728],[15179653844213159160,"icu_normalizer",false,14264767147071497457]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/idna_adapter-33d809edd2d9e7a8/dep-lib-idna_adapter","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"compiled_data\"]",
+  "declared_features": "[\"compiled_data\"]",
+  "target": 9682399050268992880,
+  "profile": 15657897354478470176,
+  "path": 17270439653357577777,
+  "deps": [
+    [8921951865346409786, "icu_properties", false, 11621037138823605728],
+    [15179653844213159160, "icu_normalizer", false, 14264767147071497457]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/idna_adapter-33d809edd2d9e7a8/dep-lib-idna_adapter",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

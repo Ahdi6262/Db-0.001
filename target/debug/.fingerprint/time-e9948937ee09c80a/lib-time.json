@@ -1,1 +1,27 @@
-{"rustc":8750902384292223123,"features":"[\"alloc\", \"formatting\", \"macros\", \"parsing\", \"std\"]","declared_features":"[\"alloc\", \"default\", \"formatting\", \"large-dates\", \"local-offset\", \"macros\", \"parsing\", \"quickcheck\", \"rand\", \"serde\", \"serde-human-readable\", \"serde-well-known\", \"std\", \"wasm-bindgen\"]","target":3713843603798095488,"profile":17564239539340744749,"path":7549745085148408797,"deps":[[253581978874359338,"deranged",false,1384898296172319394],[724804171976944018,"num_conv",false,17300945094755303486],[1509944293013079861,"time_macros",false,10450873938317972719],[5901133744777009488,"powerfmt",false,16933364371698382810],[7695812897323945497,"itoa",false,14535363967407663172],[9886904983647127192,"time_core",false,7767455041384729341]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/time-e9948937ee09c80a/dep-lib-time","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"alloc\", \"formatting\", \"macros\", \"parsing\", \"std\"]",
+  "declared_features": "[\"alloc\", \"default\", \"formatting\", \"large-dates\", \"local-offset\", \"macros\", \"parsing\", \"quickcheck\", \"rand\", \"serde\", \"serde-human-readable\", \"serde-well-known\", \"std\", \"wasm-bindgen\"]",
+  "target": 3713843603798095488,
+  "profile": 17564239539340744749,
+  "path": 7549745085148408797,
+  "deps": [
+    [253581978874359338, "deranged", false, 1384898296172319394],
+    [724804171976944018, "num_conv", false, 17300945094755303486],
+    [1509944293013079861, "time_macros", false, 10450873938317972719],
+    [5901133744777009488, "powerfmt", false, 16933364371698382810],
+    [7695812897323945497, "itoa", false, 14535363967407663172],
+    [9886904983647127192, "time_core", false, 7767455041384729341]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/time-e9948937ee09c80a/dep-lib-time",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

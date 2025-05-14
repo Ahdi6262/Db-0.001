@@ -16,7 +16,7 @@ paths:
       tags:
         - Database Management
       responses:
-        '200':
+        "200":
           description: List of available databases
           content:
             application/json:
@@ -26,13 +26,13 @@ paths:
                   databases:
                     type: array
                     items:
-                      $ref: '#/components/schemas/DatabaseInfo'
-        '500':
+                      $ref: "#/components/schemas/DatabaseInfo"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
 
   /api/v1/databases/{db_type}/{db_name}/records/{id}:
     get:
@@ -66,24 +66,24 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Record found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RecordResponse'
-        '404':
+                $ref: "#/components/schemas/RecordResponse"
+        "404":
           description: Record not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
     put:
       summary: Update a record
       operationId: updateRecord
@@ -113,26 +113,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RecordRequest'
+              $ref: "#/components/schemas/RecordRequest"
       responses:
-        '200':
+        "200":
           description: Record updated
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RecordResponse'
-        '404':
+                $ref: "#/components/schemas/RecordResponse"
+        "404":
           description: Record not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
     delete:
       summary: Delete a record
       operationId: deleteRecord
@@ -164,20 +164,20 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        "204":
           description: Record deleted
-        '404':
+        "404":
           description: Record not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
 
   /api/v1/databases/{db_type}/{db_name}/records:
     post:
@@ -203,26 +203,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RecordRequest'
+              $ref: "#/components/schemas/RecordRequest"
       responses:
-        '201':
+        "201":
           description: Record created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RecordResponse'
-        '400':
+                $ref: "#/components/schemas/RecordResponse"
+        "400":
           description: Invalid request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
 
   /api/v1/databases/{db_type}/{db_name}/query:
     post:
@@ -248,28 +248,28 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/QueryRequest'
+              $ref: "#/components/schemas/QueryRequest"
       responses:
-        '200':
+        "200":
           description: Query results
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/RecordResponse'
-        '400':
+                  $ref: "#/components/schemas/RecordResponse"
+        "400":
           description: Invalid query
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
 
   /api/v1/databases/{db_type}/{db_name}/transactions:
     post:
@@ -295,9 +295,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/TransactionRequest'
+              $ref: "#/components/schemas/TransactionRequest"
       responses:
-        '200':
+        "200":
           description: Transaction executed successfully
           content:
             application/json:
@@ -307,18 +307,18 @@ paths:
                   message:
                     type: string
                     example: Transaction executed successfully
-        '400':
+        "400":
           description: Invalid transaction
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
 
 components:
   schemas:
@@ -418,7 +418,7 @@ components:
         operations:
           type: array
           items:
-            $ref: '#/components/schemas/Operation'
+            $ref: "#/components/schemas/Operation"
           description: List of operations to execute in the transaction
 
     Operation:

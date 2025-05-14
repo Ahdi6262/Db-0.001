@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[\"default\", \"std\"]","declared_features":"[\"default\", \"std\"]","target":13586076721141200315,"profile":1369601567987815722,"path":11699513666388504915,"deps":[[3571201254924420744,"thiserror_impl",false,15252691823957445892],[10806645703491011684,"build_script_build",false,12867750241244355956]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/thiserror-06fd6e0bfd3e99ae/dep-lib-thiserror","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"default\", \"std\"]",
+  "declared_features": "[\"default\", \"std\"]",
+  "target": 13586076721141200315,
+  "profile": 1369601567987815722,
+  "path": 11699513666388504915,
+  "deps": [
+    [3571201254924420744, "thiserror_impl", false, 15252691823957445892],
+    [10806645703491011684, "build_script_build", false, 12867750241244355956]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/thiserror-06fd6e0bfd3e99ae/dep-lib-thiserror",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

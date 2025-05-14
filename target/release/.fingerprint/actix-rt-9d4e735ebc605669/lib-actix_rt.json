@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[\"actix-macros\", \"default\", \"macros\"]","declared_features":"[\"actix-macros\", \"default\", \"io-uring\", \"macros\", \"tokio-uring\"]","target":7145233089273210151,"profile":2040997289075261528,"path":11320864630027564347,"deps":[[252395743106140488,"actix_macros",false,9903579936898660819],[7303982924001358866,"tokio",false,8924933318587376314],[7620660491849607393,"futures_core",false,2506095612480993044]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/actix-rt-9d4e735ebc605669/dep-lib-actix_rt","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"actix-macros\", \"default\", \"macros\"]",
+  "declared_features": "[\"actix-macros\", \"default\", \"io-uring\", \"macros\", \"tokio-uring\"]",
+  "target": 7145233089273210151,
+  "profile": 2040997289075261528,
+  "path": 11320864630027564347,
+  "deps": [
+    [252395743106140488, "actix_macros", false, 9903579936898660819],
+    [7303982924001358866, "tokio", false, 8924933318587376314],
+    [7620660491849607393, "futures_core", false, 2506095612480993044]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/actix-rt-9d4e735ebc605669/dep-lib-actix_rt",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

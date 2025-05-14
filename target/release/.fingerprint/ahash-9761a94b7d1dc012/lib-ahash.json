@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[\"atomic-polyfill\", \"compile-time-rng\", \"const-random\", \"default\", \"serde\", \"std\"]","target":8470944000320059508,"profile":2040997289075261528,"path":6271423206335828273,"deps":[[3722963349756955755,"once_cell",false,8984361153703386593],[9920160576179037441,"getrandom",false,1093842097969917550],[18195555696463914673,"build_script_build",false,6532176306327936695]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/ahash-9761a94b7d1dc012/dep-lib-ahash","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[\"atomic-polyfill\", \"compile-time-rng\", \"const-random\", \"default\", \"serde\", \"std\"]",
+  "target": 8470944000320059508,
+  "profile": 2040997289075261528,
+  "path": 6271423206335828273,
+  "deps": [
+    [3722963349756955755, "once_cell", false, 8984361153703386593],
+    [9920160576179037441, "getrandom", false, 1093842097969917550],
+    [18195555696463914673, "build_script_build", false, 6532176306327936695]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/ahash-9761a94b7d1dc012/dep-lib-ahash",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

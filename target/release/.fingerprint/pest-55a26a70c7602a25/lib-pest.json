@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[\"default\", \"memchr\", \"std\"]","declared_features":"[\"const_prec_climber\", \"default\", \"memchr\", \"miette-error\", \"pretty-print\", \"std\"]","target":12671584014789546375,"profile":1369601567987815722,"path":12320729731328989566,"deps":[[3129130049864710036,"memchr",false,6085804953860300559],[10806645703491011684,"thiserror",false,11785193558038329708],[13759473511158668332,"ucd_trie",false,14503492099053908413]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/pest-55a26a70c7602a25/dep-lib-pest","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"default\", \"memchr\", \"std\"]",
+  "declared_features": "[\"const_prec_climber\", \"default\", \"memchr\", \"miette-error\", \"pretty-print\", \"std\"]",
+  "target": 12671584014789546375,
+  "profile": 1369601567987815722,
+  "path": 12320729731328989566,
+  "deps": [
+    [3129130049864710036, "memchr", false, 6085804953860300559],
+    [10806645703491011684, "thiserror", false, 11785193558038329708],
+    [13759473511158668332, "ucd_trie", false, 14503492099053908413]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/pest-55a26a70c7602a25/dep-lib-pest",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}
