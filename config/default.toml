@@ -9,7 +9,7 @@ workers = 4
 # Logging
 log_level = "info"
 
-# Database configurations
+# Database configurations - focusing only on PostgreSQL initially
 [[databases]]
 db_type = "postgresql"
 name = "postgres"
@@ -20,63 +20,56 @@ password = "postgres"
 pool_size = 10
 timeout_seconds = 30
 
-[[databases]]
-db_type = "mysql"
-name = "mysql"
-host = "localhost"
-port = 3306
-username = "root"
-password = "root"
-pool_size = 10
-timeout_seconds = 30
-
-[[databases]]
-db_type = "mongodb"
-name = "mongodb"
-host = "localhost"
-port = 27017
-connection_string = "mongodb://localhost:27017"
-pool_size = 10
-timeout_seconds = 30
-
-[[databases]]
-db_type = "redis"
-name = "redis"
-host = "localhost"
-port = 6379
-pool_size = 5
-timeout_seconds = 10
-
-[[databases]]
-db_type = "cassandra"
-name = "cassandra"
-host = "localhost"
-port = 9042
-pool_size = 5
-timeout_seconds = 30
-
-[[databases]]
-db_type = "neo4j"
-name = "neo4j"
-host = "localhost"
-port = 7687
-username = "neo4j"
-password = "neo4j"
-pool_size = 5
-timeout_seconds = 30
-
-[[databases]]
-db_type = "influxdb"
-name = "influxdb"
-host = "localhost"
-port = 8086
-pool_size = 5
-timeout_seconds = 30
-
-[[databases]]
-db_type = "qdrant"
-name = "qdrant"
-host = "localhost"
-port = 6333
-pool_size = 5
-timeout_seconds = 30
+# These will be added back incrementally as we expand database support
+#[[databases]]
+#db_type = "mysql"
+#name = "mysql"
+#host = "localhost"
+#port = 3306
+#username = "root"
+#password = "root"
+#pool_size = 10
+#timeout_seconds = 30
+#
+#[[databases]]
+#db_type = "mongodb"
+#name = "mongodb"
+#host = "localhost"
+#port = 27017
+#connection_string = "mongodb://localhost:27017"
+#pool_size = 10
+#timeout_seconds = 30
+#
+#[[databases]]
+#db_type = "redis"
+#name = "redis"
+#host = "localhost"
+#port = 6379
+#pool_size = 5
+#timeout_seconds = 10
+#
+#[[databases]]
+#db_type = "neo4j"
+#name = "neo4j"
+#host = "localhost"
+#port = 7687
+#username = "neo4j"
+#password = "neo4j"
+#pool_size = 5
+#timeout_seconds = 30
+#
+#[[databases]]
+#db_type = "influxdb"
+#name = "influxdb"
+#host = "localhost"
+#port = 8086
+#pool_size = 5
+#timeout_seconds = 30
+#
+#[[databases]]
+#db_type = "qdrant"
+#name = "qdrant"
+#host = "localhost"
+#port = 6333
+#pool_size = 5
+#timeout_seconds = 30

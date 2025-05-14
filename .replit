@@ -1,7 +1,8 @@
-modules = ["rust"]
+modules = ["rust", "nodejs-20"]
 
 [nix]
 channel = "stable-24_05"
+packages = ["postgresql"]
 
 [workflows]
 runButton = "Project"
@@ -15,14 +16,44 @@ author = "agent"
 task = "workflow.run"
 args = "Unified Database API Server"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Minimal API"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "NodeJS DB API Server"
+
 [[workflows.workflow]]
 name = "Unified Database API Server"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cargo run"
+args = "cargo run --bin simple"
+waitForPort = 8000
+
+[[workflows.workflow]]
+name = "Minimal API"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cargo run --release --bin mini_api"
+waitForPort = 8000
+
+[[workflows.workflow]]
+name = "NodeJS DB API Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node simple_server.js"
 waitForPort = 8000
 
 [deployment]
-run = ["sh", "-c", "cargo run"]
+run = ["sh", "-c", "cargo run --bin simple"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
