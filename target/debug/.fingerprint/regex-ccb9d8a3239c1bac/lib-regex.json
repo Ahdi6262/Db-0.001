@@ -1,1 +1,25 @@
-{"rustc":8750902384292223123,"features":"[\"default\", \"perf\", \"perf-backtrack\", \"perf-cache\", \"perf-dfa\", \"perf-inline\", \"perf-literal\", \"perf-onepass\", \"std\", \"unicode\", \"unicode-age\", \"unicode-bool\", \"unicode-case\", \"unicode-gencat\", \"unicode-perl\", \"unicode-script\", \"unicode-segment\"]","declared_features":"[\"default\", \"logging\", \"pattern\", \"perf\", \"perf-backtrack\", \"perf-cache\", \"perf-dfa\", \"perf-dfa-full\", \"perf-inline\", \"perf-literal\", \"perf-onepass\", \"std\", \"unicode\", \"unicode-age\", \"unicode-bool\", \"unicode-case\", \"unicode-gencat\", \"unicode-perl\", \"unicode-script\", \"unicode-segment\", \"unstable\", \"use_std\"]","target":5796931310894148030,"profile":2241668132362809309,"path":16337743240834829733,"deps":[[555019317135488525,"regex_automata",false,11386714395695619352],[2779309023524819297,"aho_corasick",false,14846040815473147924],[3129130049864710036,"memchr",false,8338177143160555010],[9408802513701742484,"regex_syntax",false,5159700197464390610]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/regex-ccb9d8a3239c1bac/dep-lib-regex","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"default\", \"perf\", \"perf-backtrack\", \"perf-cache\", \"perf-dfa\", \"perf-inline\", \"perf-literal\", \"perf-onepass\", \"std\", \"unicode\", \"unicode-age\", \"unicode-bool\", \"unicode-case\", \"unicode-gencat\", \"unicode-perl\", \"unicode-script\", \"unicode-segment\"]",
+  "declared_features": "[\"default\", \"logging\", \"pattern\", \"perf\", \"perf-backtrack\", \"perf-cache\", \"perf-dfa\", \"perf-dfa-full\", \"perf-inline\", \"perf-literal\", \"perf-onepass\", \"std\", \"unicode\", \"unicode-age\", \"unicode-bool\", \"unicode-case\", \"unicode-gencat\", \"unicode-perl\", \"unicode-script\", \"unicode-segment\", \"unstable\", \"use_std\"]",
+  "target": 5796931310894148030,
+  "profile": 2241668132362809309,
+  "path": 16337743240834829733,
+  "deps": [
+    [555019317135488525, "regex_automata", false, 11386714395695619352],
+    [2779309023524819297, "aho_corasick", false, 14846040815473147924],
+    [3129130049864710036, "memchr", false, 8338177143160555010],
+    [9408802513701742484, "regex_syntax", false, 5159700197464390610]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/regex-ccb9d8a3239c1bac/dep-lib-regex",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

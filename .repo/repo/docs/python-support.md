@@ -5,9 +5,9 @@ guidance for when we decide to drop support for older versions.
 
 ## Summary
 
-*   Python 3.6 (released Dec 2016) is required starting with repo-2.0.
-*   Older versions of Python (e.g. v2.7) may use old releases via the repo-1.x
-    branch, but no support is provided.
+- Python 3.6 (released Dec 2016) is required starting with repo-2.0.
+- Older versions of Python (e.g. v2.7) may use old releases via the repo-1.x
+  branch, but no support is provided.
 
 ## repo hooks
 
@@ -31,10 +31,10 @@ official support for older versions of Python than the rest of the codebase.
 If your default python interpreters are too old to run the launcher even though
 you have newer versions installed, your choices are:
 
-*   Modify the [repo launcher]'s shebang to suite your environment.
-*   Download an older version of the [repo launcher] and don't upgrade it.
-    Be aware that we do not guarantee old repo launchers will work with current
-    versions of repo.  Bug reports using old launchers will not be accepted.
+- Modify the [repo launcher]'s shebang to suite your environment.
+- Download an older version of the [repo launcher] and don't upgrade it.
+  Be aware that we do not guarantee old repo launchers will work with current
+  versions of repo. Bug reports using old launchers will not be accepted.
 
 ## When to drop support
 
@@ -47,31 +47,28 @@ How do we decide when it's acceptable to drop Python 3.6?
 
 1.  Review the [Project References](./release-process.md#project-references) to
     see what major distros are using the previous version of Python, and when
-    they go EOL.  Generally we care about Ubuntu LTS & current/previous Debian
+    they go EOL. Generally we care about Ubuntu LTS & current/previous Debian
     stable versions.
-    *   If they're all EOL already, then go for it, drop support.
-    *   If they aren't EOL, start a thread on [repo-discuss] to see how the user
-        base feels about the proposal.
-1.  Update the "soft" versions in the codebase.  This will start warning users
+    - If they're all EOL already, then go for it, drop support.
+    - If they aren't EOL, start a thread on [repo-discuss] to see how the user
+      base feels about the proposal.
+1.  Update the "soft" versions in the codebase. This will start warning users
     that the older version is deprecated.
-    *   Update [repo](/repo) if the launcher needs updating.
-        This only helps with people who download newer launchers.
-    *   Update [main.py](/main.py) for the main codebase.
-        This warns for everyone regardless of [repo launcher] version.
-    *   Update [requirements.json](/requirements.json).
-        This allows [repo launcher] to display warnings/errors without having
-        to execute the new codebase.  This helps in case of syntax or module
-        changes where older versions won't even be able to import the new code.
+    - Update [repo](/repo) if the launcher needs updating.
+      This only helps with people who download newer launchers.
+    - Update [main.py](/main.py) for the main codebase.
+      This warns for everyone regardless of [repo launcher] version.
+    - Update [requirements.json](/requirements.json).
+      This allows [repo launcher] to display warnings/errors without having
+      to execute the new codebase. This helps in case of syntax or module
+      changes where older versions won't even be able to import the new code.
 1.  After some grace period (ideally at least 2 quarters after the first release
     with the updated soft requirements), update the "hard" versions, and then
     start using the new functionality.
 
 ## Python 2.7 & 3.0-3.5
 
-> **There is no support for these versions.**
-> **Do not file bugs if you are using old Python versions.**
-> **Any such reports will be marked invalid and ignored.**
-> **Upgrade your distro and/or runtime instead.**
+> **There is no support for these versions.** > **Do not file bugs if you are using old Python versions.** > **Any such reports will be marked invalid and ignored.** > **Upgrade your distro and/or runtime instead.**
 
 Fetch an old version of the [repo launcher]:
 
@@ -85,7 +82,6 @@ Then initialize an old version of repo:
 ```sh
 $ repo-2.32 init --repo-rev=repo-1 ...
 ```
-
 
 [repo-discuss]: https://groups.google.com/forum/#!forum/repo-discuss
 [repo hooks]: ./repo-hooks.md

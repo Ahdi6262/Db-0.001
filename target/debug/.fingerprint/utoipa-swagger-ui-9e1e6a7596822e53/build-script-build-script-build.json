@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[\"actix-web\"]","declared_features":"[\"actix-web\", \"axum\", \"debug\", \"debug-embed\", \"rocket\"]","target":5408242616063297496,"profile":2225463790103693989,"path":17457368403927910855,"deps":[[4716821492401257289,"zip",false,11967357523524432528],[9451456094439810778,"regex",false,1155974583027147301]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/utoipa-swagger-ui-9e1e6a7596822e53/dep-build-script-build-script-build","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"actix-web\"]",
+  "declared_features": "[\"actix-web\", \"axum\", \"debug\", \"debug-embed\", \"rocket\"]",
+  "target": 5408242616063297496,
+  "profile": 2225463790103693989,
+  "path": 17457368403927910855,
+  "deps": [
+    [4716821492401257289, "zip", false, 11967357523524432528],
+    [9451456094439810778, "regex", false, 1155974583027147301]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/utoipa-swagger-ui-9e1e6a7596822e53/dep-build-script-build-script-build",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

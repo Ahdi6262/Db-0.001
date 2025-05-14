@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[\"debug-embed\", \"globset\", \"include-exclude\", \"mime-guess\", \"mime_guess\"]","target":12007023176829668225,"profile":1369601567987815722,"path":13924378844968778463,"deps":[[9857275760291862238,"sha2",false,1216949578345994657],[15622660310229662834,"walkdir",false,12198307816801461748]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/rust-embed-utils-5d7687ffc01bc26e/dep-lib-rust_embed_utils","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[\"debug-embed\", \"globset\", \"include-exclude\", \"mime-guess\", \"mime_guess\"]",
+  "target": 12007023176829668225,
+  "profile": 1369601567987815722,
+  "path": 13924378844968778463,
+  "deps": [
+    [9857275760291862238, "sha2", false, 1216949578345994657],
+    [15622660310229662834, "walkdir", false, 12198307816801461748]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/rust-embed-utils-5d7687ffc01bc26e/dep-lib-rust_embed_utils",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

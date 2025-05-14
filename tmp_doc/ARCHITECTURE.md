@@ -76,6 +76,7 @@ The API server exposes endpoints for client applications to interact with the sy
 Each database type has a dedicated adapter that translates between the unified API and the specific database protocol. The adapters implement a common interface to ensure consistent behavior.
 
 Supported database types include:
+
 - SQL databases (PostgreSQL, MySQL)
 - NoSQL databases (MongoDB, Redis, Cassandra)
 - Graph databases (Neo4j)

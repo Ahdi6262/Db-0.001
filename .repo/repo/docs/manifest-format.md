@@ -8,11 +8,10 @@ The basic structure of a manifest is a bare Git repository holding
 a single `default.xml` XML file in the top level directory.
 
 Manifests are inherently version controlled, since they are kept
-within a Git repository.  Updates to manifests are automatically
+within a Git repository. Updates to manifests are automatically
 obtained by clients during `repo sync`.
 
 [TOC]
-
 
 ## XML File Format
 
@@ -135,13 +134,12 @@ following DTD:
 ```
 
 For compatibility purposes across repo releases, all unknown elements are
-silently ignored.  However, repo reserves all possible names for itself for
-future use.  If you want to use custom elements, the `x-*` namespace is
+silently ignored. However, repo reserves all possible names for itself for
+future use. If you want to use custom elements, the `x-*` namespace is
 reserved for that purpose, and repo guarantees to never allocate any
 corresponding names.
 
 A description of the elements and their attributes follows.
-
 
 ### Element manifest
 
@@ -154,11 +152,11 @@ The content is simply passed through as it exists in the manifest.
 
 ### Element remote
 
-One or more remote elements may be specified.  Each remote element
+One or more remote elements may be specified. Each remote element
 specifies a Git URL shared by one or more projects and (optionally)
 the Gerrit review server those projects upload changes through.
 
-Attribute `name`: A short name unique to this manifest file.  The
+Attribute `name`: A short name unique to this manifest file. The
 name specified here is used as the remote name in each project's
 .git/config, and is therefore automatically available to commands
 like `git fetch`, `git remote`, `git pull` and `git push`.
@@ -170,17 +168,17 @@ in the manifest file. This helps each project to be able to have
 same remote name which actually points to different remote url.
 
 Attribute `fetch`: The Git URL prefix for all projects which use
-this remote.  Each project's name is appended to this prefix to
+this remote. Each project's name is appended to this prefix to
 form the actual URL used to clone the project.
 
 Attribute `pushurl`: The Git "push" URL prefix for all projects
-which use this remote.  Each project's name is appended to this
+which use this remote. Each project's name is appended to this
 prefix to form the actual URL used to "git push" the project.
 This attribute is optional; if not specified then "git push"
 will use the same URL as the `fetch` attribute.
 
 Attribute `review`: Hostname of the Gerrit server where reviews
-are uploaded to by `repo upload`.  This attribute is optional;
+are uploaded to by `repo upload`. This attribute is optional;
 if not specified then `repo upload` will not function.
 
 Attribute `revision`: Name of a Git branch (e.g. `main` or
@@ -189,7 +187,7 @@ the default revision.
 
 ### Element default
 
-At most one default element may be specified.  Its remote and
+At most one default element may be specified. Its remote and
 revision attributes are used when a project element does not
 specify its own remote or revision attribute.
 
@@ -198,7 +196,7 @@ Project elements lacking a remote attribute of their own will use
 this remote.
 
 Attribute `revision`: Name of a Git branch (e.g. `main` or
-`refs/heads/main`).  Project elements lacking their own
+`refs/heads/main`). Project elements lacking their own
 revision attribute will use this revision.
 
 Attribute `dest-branch`: Name of a Git branch (e.g. `main`).
@@ -207,7 +205,7 @@ this value. If this value is not set, projects will use `revision`
 by default instead.
 
 Attribute `upstream`: Name of the Git ref in which a sha1
-can be found.  Used when syncing a revision locked manifest in
+can be found. Used when syncing a revision locked manifest in
 -c mode to avoid having to sync the entire ref space. Project elements
 not setting their own `upstream` will inherit this value.
 
@@ -215,7 +213,7 @@ Attribute `sync-j`: Number of parallel jobs to use when synching.
 
 Attribute `sync-c`: Set to true to only sync the given Git
 branch (specified in the `revision` attribute) rather than the
-whole ref space.  Project elements lacking a sync-c element of
+whole ref space. Project elements lacking a sync-c element of
 their own will use this value.
 
 Attribute `sync-s`: Set to true to also sync sub-projects.
@@ -223,7 +221,6 @@ Attribute `sync-s`: Set to true to also sync sub-projects.
 Attribute `sync-tags`: Set to false to only sync the given Git
 branch (specified in the `revision` attribute) rather than
 the other ref tags.
-
 
 ### Element manifest-server
 
@@ -233,36 +230,35 @@ XML RPC service.
 
 See the [smart sync documentation](./smart-sync.md) for more details.
 
-
 ### Element submanifest
 
-One or more submanifest elements may be specified.  Each element describes a
+One or more submanifest elements may be specified. Each element describes a
 single manifest to be checked out as a child.
 
 Attribute `name`: A unique name (within the current (sub)manifest) for this
-submanifest. It acts as a default for `revision` below.  The same name can be
+submanifest. It acts as a default for `revision` below. The same name can be
 used for submanifests with different parent (sub)manifests.
 
 Attribute `remote`: Name of a previously defined remote element.
 If not supplied the remote given by the default element is used.
 
-Attribute `project`: The manifest project name.  The project's name is appended
+Attribute `project`: The manifest project name. The project's name is appended
 onto its remote's fetch URL to generate the actual URL to configure the Git
-remote with.  The URL gets formed as:
+remote with. The URL gets formed as:
 
     ${remote_fetch}/${project_name}.git
 
 where ${remote_fetch} is the remote's fetch attribute and
-${project_name} is the project's name attribute.  The suffix ".git"
+${project_name} is the project's name attribute. The suffix ".git"
 is always appended as repo assumes the upstream is a forest of
-bare Git repositories.  If the project has a parent element, its
+bare Git repositories. If the project has a parent element, its
 name will be prefixed by the parent's.
 
 The project name must match the name Gerrit knows, if Gerrit is
 being used for code reviews.
 
 `project` must not be empty, and may not be an absolute path or use "." or ".."
-path components.  It is always interpreted relative to the remote's fetch
+path components. It is always interpreted relative to the remote's fetch
 settings, so if a different base path is needed, declare a different remote
 with the new settings needed.
 
@@ -272,16 +268,16 @@ cannot be supplied.
 Projects from a submanifest and its submanifests are added to the
 submanifest::path:<path_prefix> group.
 
-Attribute `manifest-name`: The manifest filename in the manifest project.  If
+Attribute `manifest-name`: The manifest filename in the manifest project. If
 not supplied, `default.xml` is used.
 
 Attribute `revision`: Name of a Git branch (e.g. "main" or "refs/heads/main"),
-tag (e.g. "refs/tags/stable"), or a commit hash.  If not supplied, `name` is
+tag (e.g. "refs/tags/stable"), or a commit hash. If not supplied, `name` is
 used.
 
 Attribute `path`: An optional path relative to the top directory
 of the repo client where the submanifest repo client top directory
-should be placed.  If not supplied, `revision` is used.
+should be placed. If not supplied, `revision` is used.
 
 `path` may not be an absolute path or use "." or ".." path components.
 
@@ -291,42 +287,42 @@ all projects in submanifests carry all parent submanifest groups.
 Same syntax as the corresponding element of `project`.
 
 Attribute `default-groups`: The list of manifest groups to sync if no
-`--groups=` parameter was specified at init.  When that list is empty, use this
+`--groups=` parameter was specified at init. When that list is empty, use this
 list instead of "default" as the list of groups to sync.
 
 ### Element project
 
-One or more project elements may be specified.  Each element
+One or more project elements may be specified. Each element
 describes a single Git repository to be cloned into the repo
-client workspace.  You may specify Git-submodules by creating a
-nested project.  Git-submodules will be automatically
+client workspace. You may specify Git-submodules by creating a
+nested project. Git-submodules will be automatically
 recognized and inherit their parent's attributes, but those
 may be overridden by an explicitly specified project element.
 
-Attribute `name`: A unique name for this project.  The project's
+Attribute `name`: A unique name for this project. The project's
 name is appended onto its remote's fetch URL to generate the actual
-URL to configure the Git remote with.  The URL gets formed as:
+URL to configure the Git remote with. The URL gets formed as:
 
     ${remote_fetch}/${project_name}.git
 
 where ${remote_fetch} is the remote's fetch attribute and
-${project_name} is the project's name attribute.  The suffix ".git"
+${project_name} is the project's name attribute. The suffix ".git"
 is always appended as repo assumes the upstream is a forest of
-bare Git repositories.  If the project has a parent element, its
+bare Git repositories. If the project has a parent element, its
 name will be prefixed by the parent's.
 
 The project name must match the name Gerrit knows, if Gerrit is
 being used for code reviews.
 
 "name" must not be empty, and may not be an absolute path or use "." or ".."
-path components.  It is always interpreted relative to the remote's fetch
+path components. It is always interpreted relative to the remote's fetch
 settings, so if a different base path is needed, declare a different remote
 with the new settings needed.
 These restrictions are not enforced for [Local Manifests].
 
 Attribute `path`: An optional path relative to the top directory
 of the repo client where the Git working directory for this project
-should be placed.  If not supplied the project "name" is used.
+should be placed. If not supplied the project "name" is used.
 If the project has a parent element, its path will be prefixed
 by the parent's.
 
@@ -341,10 +337,10 @@ Attribute `remote`: Name of a previously defined remote element.
 If not supplied the remote given by the default element is used.
 
 Attribute `revision`: Name of the Git branch the manifest wants
-to track for this project.  Names can be relative to refs/heads
+to track for this project. Names can be relative to refs/heads
 (e.g. just "main") or absolute (e.g. "refs/heads/main").
 Tags and/or explicit SHA-1s should work in theory, but have not
-been extensively tested.  If not supplied the revision given by
+been extensively tested. If not supplied the revision given by
 the remote element is used if applicable, else the default
 element is used.
 
@@ -354,12 +350,12 @@ review on this branch. If unspecified both here and in the
 default element, `revision` is used instead.
 
 Attribute `groups`: List of groups to which this project belongs,
-whitespace or comma separated.  All projects belong to the group
+whitespace or comma separated. All projects belong to the group
 "all", and each project automatically belongs to a group of
-its name:`name` and path:`path`.  E.g. for
+its name:`name` and path:`path`. E.g. for
 `<project name="monkeys" path="barrel-of"/>`, that project
 definition is implicitly in the following manifest groups:
-default, name:monkeys, and path:barrel-of.  If you place a project in the
+default, name:monkeys, and path:barrel-of. If you place a project in the
 group "notdefault", it will not be automatically downloaded by repo.
 If the project has a parent element, the `name` and `path` here
 are the prefixed ones.
@@ -371,16 +367,16 @@ whole ref space.
 Attribute `sync-s`: Set to true to also sync sub-projects.
 
 Attribute `upstream`: Name of the Git ref in which a sha1
-can be found.  Used when syncing a revision locked manifest in
+can be found. Used when syncing a revision locked manifest in
 -c mode to avoid having to sync the entire ref space.
 
 Attribute `clone-depth`: Set the depth to use when fetching this
-project.  If specified, this value will override any value given
+project. If specified, this value will override any value given
 to repo init with the --depth option on the command line.
 
 Attribute `force-path`: Set to true to force this project to create the
 local mirror repository according to its `path` attribute (if supplied)
-rather than the `name` attribute.  This attribute only applies to the
+rather than the `name` attribute. This attribute only applies to the
 local mirrors syncing, it will be ignored when syncing the projects in a
 client working directory.
 
@@ -390,7 +386,7 @@ Modify the attributes of the named project.
 
 This element is mostly useful in a local manifest file, to modify the
 attributes of an existing project without completely replacing the
-existing project definition.  This makes the local manifest more robust
+existing project definition. This makes the local manifest more robust
 against changes to the original manifest.
 
 Attribute `path`: If specified, limit the change to projects checked out
@@ -398,23 +394,23 @@ at the specified path, rather than all projects with the given name.
 
 Attribute `dest-path`: If specified, a path relative to the top directory
 of the repo client where the Git working directory for this project
-should be placed.  This is used to move a project in the checkout by
+should be placed. This is used to move a project in the checkout by
 overriding the existing `path` setting.
 
 Attribute `groups`: List of additional groups to which this project
-belongs.  Same syntax as the corresponding element of `project`.
+belongs. Same syntax as the corresponding element of `project`.
 
 Attribute `revision`: If specified, overrides the revision of the original
-project.  Same syntax as the corresponding element of `project`.
+project. Same syntax as the corresponding element of `project`.
 
 Attribute `remote`: If specified, overrides the remote of the original
-project.  Same syntax as the corresponding element of `project`.
+project. Same syntax as the corresponding element of `project`.
 
 Attribute `dest-branch`: If specified, overrides the dest-branch of the original
-project.  Same syntax as the corresponding element of `project`.
+project. Same syntax as the corresponding element of `project`.
 
 Attribute `upstream`: If specified, overrides the upstream of the original
-project.  Same syntax as the corresponding element of `project`.
+project. Same syntax as the corresponding element of `project`.
 
 Attribute `base-rev`: If specified, adds a check against the revision
 to be extended. Manifest parse will fail and give a list of mismatch extends
@@ -429,9 +425,9 @@ Same syntax as the corresponding element of `project`.
 Zero or more annotation elements may be specified as children of a
 project or remote element. Each element describes a name-value pair.
 For projects, this name-value pair will be exported into each project's
-environment during a 'forall' command, prefixed with `REPO__`.  In addition,
+environment during a 'forall' command, prefixed with `REPO__`. In addition,
 there is an optional attribute "keep" which accepts the case insensitive values
-"true" (default) or "false".  This attribute determines whether or not the
+"true" (default) or "false". This attribute determines whether or not the
 annotation will be kept when exported with the manifest subcommand.
 
 ### Element copyfile
@@ -445,7 +441,7 @@ command.
 Copying from paths outside of the project or to paths outside of the repo
 client is not allowed.
 
-"src" and "dest" must be files.  Directories or symlinks are not allowed.
+"src" and "dest" must be files. Directories or symlinks are not allowed.
 Intermediate paths must not be symlinks either.
 
 Parent directories of "dest" will be automatically created if missing.
@@ -502,7 +498,7 @@ NB: See the [practical documentation](./repo-hooks.md) for using repo hooks.
 Only one repo-hooks element may be specified at a time.
 Attempting to redefine it will fail to parse.
 
-Attribute `in-project`: The project where the hooks are defined.  The value
+Attribute `in-project`: The project where the hooks are defined. The value
 must match the `name` attribute (**not** the `path` attribute) of a previously
 defined `project` element.
 
@@ -510,12 +506,13 @@ Attribute `enabled-list`: List of hooks to use, whitespace or comma separated.
 
 ### Element superproject
 
-***
-*Note*: This is currently a WIP.
-***
+---
 
-NB: See the [git superprojects documentation](
-https://en.wikibooks.org/wiki/Git/Submodules_and_Superprojects) for background
+_Note_: This is currently a WIP.
+
+---
+
+NB: See the [git superprojects documentation](https://en.wikibooks.org/wiki/Git/Submodules_and_Superprojects) for background
 information.
 
 This element is used to specify the URL of the superproject. It has "name" and
@@ -537,9 +534,11 @@ element is used.
 
 ### Element contactinfo
 
-***
-*Note*: This is currently a WIP.
-***
+---
+
+_Note_: This is currently a WIP.
+
+---
 
 This element is used to let manifest authors self-register contact info.
 It has "bugurl" as a required atrribute. This element can be repeated,
@@ -551,7 +550,7 @@ Attribute `bugurl`: The URL to file a bug against the manifest owner.
 ### Element include
 
 This element provides the capability of including another manifest
-file into the originating manifest.  Normal rules apply for the
+file into the originating manifest. Normal rules apply for the
 target manifest to include - it must be a usable manifest on its own.
 
 Attribute `name`: the manifest to include, specified relative to
@@ -599,7 +598,6 @@ Projects from local manifest files are added into
 local::<local manifest filename> group.
 
 The legacy `$TOP_DIR/.repo/local_manifest.xml` path is no longer supported.
-
 
 [copyfile]: #Element-copyfile
 [linkfile]: #Element-linkfile

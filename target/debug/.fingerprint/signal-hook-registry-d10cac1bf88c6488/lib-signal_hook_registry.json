@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[]","target":17877812014956321412,"profile":2241668132362809309,"path":5315044612280806240,"deps":[[2924422107542798392,"libc",false,5995472629359518350]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/signal-hook-registry-d10cac1bf88c6488/dep-lib-signal_hook_registry","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[]",
+  "target": 17877812014956321412,
+  "profile": 2241668132362809309,
+  "path": 5315044612280806240,
+  "deps": [[2924422107542798392, "libc", false, 5995472629359518350]],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/signal-hook-registry-d10cac1bf88c6488/dep-lib-signal_hook_registry",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

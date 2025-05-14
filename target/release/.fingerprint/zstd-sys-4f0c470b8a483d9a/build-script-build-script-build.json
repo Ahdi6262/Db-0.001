@@ -1,1 +1,23 @@
-{"rustc":8750902384292223123,"features":"[\"legacy\", \"std\", \"zdict_builder\"]","declared_features":"[\"bindgen\", \"debug\", \"default\", \"experimental\", \"fat-lto\", \"legacy\", \"no_asm\", \"no_wasm_shim\", \"non-cargo\", \"pkg-config\", \"seekable\", \"std\", \"thin\", \"thin-lto\", \"zdict_builder\", \"zstdmt\"]","target":17883862002600103897,"profile":553535042449443078,"path":4471406366571570555,"deps":[[603660933955387504,"cc",false,3905373608170933456],[3214373357989284387,"pkg_config",false,4503085094024416343]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/zstd-sys-4f0c470b8a483d9a/dep-build-script-build-script-build","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"legacy\", \"std\", \"zdict_builder\"]",
+  "declared_features": "[\"bindgen\", \"debug\", \"default\", \"experimental\", \"fat-lto\", \"legacy\", \"no_asm\", \"no_wasm_shim\", \"non-cargo\", \"pkg-config\", \"seekable\", \"std\", \"thin\", \"thin-lto\", \"zdict_builder\", \"zstdmt\"]",
+  "target": 17883862002600103897,
+  "profile": 553535042449443078,
+  "path": 4471406366571570555,
+  "deps": [
+    [603660933955387504, "cc", false, 3905373608170933456],
+    [3214373357989284387, "pkg_config", false, 4503085094024416343]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/zstd-sys-4f0c470b8a483d9a/dep-build-script-build-script-build",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

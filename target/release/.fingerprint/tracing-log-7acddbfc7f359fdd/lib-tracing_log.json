@@ -1,1 +1,24 @@
-{"rustc":8750902384292223123,"features":"[\"log-tracer\", \"std\"]","declared_features":"[\"ahash\", \"default\", \"interest-cache\", \"log-tracer\", \"lru\", \"std\"]","target":13317203838154184687,"profile":2040997289075261528,"path":4848381160757365288,"deps":[[3722963349756955755,"once_cell",false,8984361153703386593],[5986029879202738730,"log",false,2072509222750772858],[11033263105862272874,"tracing_core",false,9247318376602318450]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/tracing-log-7acddbfc7f359fdd/dep-lib-tracing_log","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"log-tracer\", \"std\"]",
+  "declared_features": "[\"ahash\", \"default\", \"interest-cache\", \"log-tracer\", \"lru\", \"std\"]",
+  "target": 13317203838154184687,
+  "profile": 2040997289075261528,
+  "path": 4848381160757365288,
+  "deps": [
+    [3722963349756955755, "once_cell", false, 8984361153703386593],
+    [5986029879202738730, "log", false, 2072509222750772858],
+    [11033263105862272874, "tracing_core", false, 9247318376602318450]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/tracing-log-7acddbfc7f359fdd/dep-lib-tracing_log",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

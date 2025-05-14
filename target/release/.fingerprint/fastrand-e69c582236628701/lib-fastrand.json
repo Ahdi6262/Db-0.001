@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[\"alloc\", \"default\", \"std\"]","declared_features":"[\"alloc\", \"default\", \"getrandom\", \"js\", \"std\"]","target":9543367341069791401,"profile":1369601567987815722,"path":9253091579151995730,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/fastrand-e69c582236628701/dep-lib-fastrand","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"alloc\", \"default\", \"std\"]",
+  "declared_features": "[\"alloc\", \"default\", \"getrandom\", \"js\", \"std\"]",
+  "target": 9543367341069791401,
+  "profile": 1369601567987815722,
+  "path": 9253091579151995730,
+  "deps": [],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/fastrand-e69c582236628701/dep-lib-fastrand",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

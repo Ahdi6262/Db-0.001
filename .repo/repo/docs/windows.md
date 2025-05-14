@@ -21,10 +21,11 @@ It might work, but it most likely won't, so please don't bother asking.
 
 ## Git worktrees
 
-*** note
-**Warning**: Repo's support for Git worktrees is new & experimental.
+**\* note
+**Warning\*\*: Repo's support for Git worktrees is new & experimental.
 Please report any bugs and be sure to maintain backups!
-***
+
+---
 
 The Repo 2.4 release introduced support for [Git worktrees][git-worktree].
 You don't have to worry about or understand this particular feature, so don't
@@ -42,13 +43,14 @@ This does not effect specific Git repositories that use symlinks themselves.
 
 ## Symlinks by default
 
-*** note
-**NB**: This section applies to the default Repo behavior which does not use
+**\* note
+**NB\*\*: This section applies to the default Repo behavior which does not use
 Git worktrees (see the previous section for more info).
-***
+
+---
 
 Repo will use symlinks heavily internally.
-On *NIX platforms, this isn't an issue, but Windows makes it a bit difficult.
+On \*NIX platforms, this isn't an issue, but Windows makes it a bit difficult.
 
 There are some documents out there for how to do this, but usually the easiest
 answer is to run your shell as an Administrator and invoke repo/git in that.
@@ -60,20 +62,22 @@ This isn't a great solution, but Windows doesn't make this easy, so here we are.
 If you install Git Bash (see below), you can launch that with appropriate
 permissions so that all programs "just work".
 
-* Open the Start Menu (i.e. press the ⊞ key).
-* Find/search for "Git Bash".
-* Right click it and select "Run as administrator".
+- Open the Start Menu (i.e. press the ⊞ key).
+- Find/search for "Git Bash".
+- Right click it and select "Run as administrator".
 
-*** note
-**NB**: This environment is only needed when running `repo`, or any specific `git`
+**\* note
+**NB\*\*: This environment is only needed when running `repo`, or any specific `git`
 command that might involve symlinks (e.g. `pull` or `checkout`).
 You do not need to run all your commands in here such as your editor.
-***
+
+---
 
 ### Symlinks with GNU tools
 
 If you want to use `ln -s` inside of the default Git/bash shell, you might need
 to export this environment variable:
+
 ```sh
 $ export MSYS="winsymlinks:nativestrict"
 ```
@@ -83,8 +87,8 @@ This also helps `tar` unpack symlinks, so that's nice.
 
 ### References
 
-* https://github.com/git-for-windows/git/wiki/Symbolic-Links
-* https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10/
+- https://github.com/git-for-windows/git/wiki/Symbolic-Links
+- https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10/
 
 ## Python
 
@@ -122,6 +126,7 @@ Who knows!
 
 When using `repo upload` in projects that have custom repohooks, you might get
 an error like the following:
+
 ```sh
 $ repo upload
 ERROR: You must allow the pre-upload hook or use --no-verify.
@@ -134,6 +139,7 @@ always fails.
 
 You can workaround this by manually granting consent when uploading.
 Simply add the `--verify` option whenever uploading:
+
 ```sh
 $ repo upload --verify
 ```
@@ -146,6 +152,7 @@ You will have to specify this flag every time you upload.
 
 When using the [reference repohooks project][repohooks] included in AOSP,
 you might see errors like this when running `repo upload`:
+
 ```sh
 $ repo upload
 ERROR: Traceback (most recent call last):

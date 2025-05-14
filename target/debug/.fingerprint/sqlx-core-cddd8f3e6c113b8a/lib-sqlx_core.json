@@ -1,1 +1,56 @@
-{"rustc":8750902384292223123,"features":"[\"_rt-tokio\", \"_tls-rustls\", \"any\", \"crc\", \"default\", \"json\", \"migrate\", \"offline\", \"rustls\", \"rustls-pemfile\", \"serde\", \"serde_json\", \"sha2\", \"tokio\", \"tokio-stream\", \"uuid\", \"webpki-roots\"]","declared_features":"[\"_rt-async-std\", \"_rt-tokio\", \"_tls-native-tls\", \"_tls-none\", \"_tls-rustls\", \"any\", \"async-io\", \"async-std\", \"bigdecimal\", \"bit-vec\", \"bstr\", \"chrono\", \"crc\", \"default\", \"digest\", \"encoding_rs\", \"ipnetwork\", \"json\", \"mac_address\", \"migrate\", \"native-tls\", \"num-bigint\", \"offline\", \"regex\", \"rust_decimal\", \"rustls\", \"rustls-pemfile\", \"serde\", \"serde_json\", \"sha1\", \"sha2\", \"time\", \"tokio\", \"tokio-stream\", \"uuid\", \"webpki-roots\"]","target":2042750936636613814,"profile":2225463790103693989,"path":17361101418103424187,"deps":[[5103565458935487,"futures_io",false,5354990884956654184],[40386456601120721,"percent_encoding",false,9670428491543573243],[530211389790465181,"hex",false,6066287606349246199],[788558663644978524,"crossbeam_queue",false,13302568721722291693],[966925859616469517,"ahash",false,7198016015262473665],[1162433738665300155,"crc",false,5986539216345072590],[1464803193346256239,"event_listener",false,8014957568366878195],[1811549171721445101,"futures_channel",false,17576289597895591357],[3129130049864710036,"memchr",false,4680153640080608579],[3150220818285335163,"url",false,1974947429739553097],[3405817021026194662,"hashlink",false,15208052460878298061],[3646857438214563691,"futures_intrusive",false,17668221154415171618],[3712811570531045576,"byteorder",false,5631447012313075293],[3722963349756955755,"once_cell",false,1710606353348028963],[5986029879202738730,"log",false,14492025793395251181],[6048213226671835012,"smallvec",false,14015595895827812978],[7303982924001358866,"tokio",false,11949759237674116565],[7620660491849607393,"futures_core",false,10917226976260884178],[8008191657135824715,"thiserror",false,10171171826558578655],[8269115081296425610,"uuid",false,9478336410007333790],[8606274917505247608,"tracing",false,9214932830075163620],[9689903380558560274,"serde",false,17636365454099479695],[9857275760291862238,"sha2",false,15610519154749499807],[10629569228670356391,"futures_util",false,4781857513675689471],[10862088793507253106,"sqlformat",false,4651195603994769519],[11295624341523567602,"rustls",false,14661378906327735495],[12170264697963848012,"either",false,784148487239699706],[14483812548788871374,"indexmap",false,12082458996073261217],[15367738274754116744,"serde_json",false,12394396545423443309],[16066129441945555748,"bytes",false,12932066869364542047],[16311359161338405624,"rustls_pemfile",false,16910930457650354941],[16973251432615581304,"tokio_stream",false,7797287220046069161],[17106256174509013259,"atoi",false,10082450054493874232],[17605717126308396068,"paste",false,13631974538444330915],[17652733826348741533,"webpki_roots",false,11829630747330092735]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/sqlx-core-cddd8f3e6c113b8a/dep-lib-sqlx_core","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"_rt-tokio\", \"_tls-rustls\", \"any\", \"crc\", \"default\", \"json\", \"migrate\", \"offline\", \"rustls\", \"rustls-pemfile\", \"serde\", \"serde_json\", \"sha2\", \"tokio\", \"tokio-stream\", \"uuid\", \"webpki-roots\"]",
+  "declared_features": "[\"_rt-async-std\", \"_rt-tokio\", \"_tls-native-tls\", \"_tls-none\", \"_tls-rustls\", \"any\", \"async-io\", \"async-std\", \"bigdecimal\", \"bit-vec\", \"bstr\", \"chrono\", \"crc\", \"default\", \"digest\", \"encoding_rs\", \"ipnetwork\", \"json\", \"mac_address\", \"migrate\", \"native-tls\", \"num-bigint\", \"offline\", \"regex\", \"rust_decimal\", \"rustls\", \"rustls-pemfile\", \"serde\", \"serde_json\", \"sha1\", \"sha2\", \"time\", \"tokio\", \"tokio-stream\", \"uuid\", \"webpki-roots\"]",
+  "target": 2042750936636613814,
+  "profile": 2225463790103693989,
+  "path": 17361101418103424187,
+  "deps": [
+    [5103565458935487, "futures_io", false, 5354990884956654184],
+    [40386456601120721, "percent_encoding", false, 9670428491543573243],
+    [530211389790465181, "hex", false, 6066287606349246199],
+    [788558663644978524, "crossbeam_queue", false, 13302568721722291693],
+    [966925859616469517, "ahash", false, 7198016015262473665],
+    [1162433738665300155, "crc", false, 5986539216345072590],
+    [1464803193346256239, "event_listener", false, 8014957568366878195],
+    [1811549171721445101, "futures_channel", false, 17576289597895591357],
+    [3129130049864710036, "memchr", false, 4680153640080608579],
+    [3150220818285335163, "url", false, 1974947429739553097],
+    [3405817021026194662, "hashlink", false, 15208052460878298061],
+    [3646857438214563691, "futures_intrusive", false, 17668221154415171618],
+    [3712811570531045576, "byteorder", false, 5631447012313075293],
+    [3722963349756955755, "once_cell", false, 1710606353348028963],
+    [5986029879202738730, "log", false, 14492025793395251181],
+    [6048213226671835012, "smallvec", false, 14015595895827812978],
+    [7303982924001358866, "tokio", false, 11949759237674116565],
+    [7620660491849607393, "futures_core", false, 10917226976260884178],
+    [8008191657135824715, "thiserror", false, 10171171826558578655],
+    [8269115081296425610, "uuid", false, 9478336410007333790],
+    [8606274917505247608, "tracing", false, 9214932830075163620],
+    [9689903380558560274, "serde", false, 17636365454099479695],
+    [9857275760291862238, "sha2", false, 15610519154749499807],
+    [10629569228670356391, "futures_util", false, 4781857513675689471],
+    [10862088793507253106, "sqlformat", false, 4651195603994769519],
+    [11295624341523567602, "rustls", false, 14661378906327735495],
+    [12170264697963848012, "either", false, 784148487239699706],
+    [14483812548788871374, "indexmap", false, 12082458996073261217],
+    [15367738274754116744, "serde_json", false, 12394396545423443309],
+    [16066129441945555748, "bytes", false, 12932066869364542047],
+    [16311359161338405624, "rustls_pemfile", false, 16910930457650354941],
+    [16973251432615581304, "tokio_stream", false, 7797287220046069161],
+    [17106256174509013259, "atoi", false, 10082450054493874232],
+    [17605717126308396068, "paste", false, 13631974538444330915],
+    [17652733826348741533, "webpki_roots", false, 11829630747330092735]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "debug/.fingerprint/sqlx-core-cddd8f3e6c113b8a/dep-lib-sqlx_core",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

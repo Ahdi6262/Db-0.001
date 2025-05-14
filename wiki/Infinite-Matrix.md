@@ -17,6 +17,7 @@ The Infinite Matrix is a flexible data structure that lets you:
 ### Dimensions
 
 Each dimension has:
+
 - A name (e.g., "time", "user", "metric")
 - A type (currently only "numeric" is supported)
 - Minimum and maximum boundaries
@@ -28,10 +29,10 @@ Values are accessed using coordinates - arrays of values corresponding to positi
 
 ```javascript
 // 3D coordinates: [x, y, z]
-[10, 20, 30]
-
-// 4D coordinates: [time, user, metric, region]
-[1, 123, 5, 2]
+[10, 20, 30][
+  // 4D coordinates: [time, user, metric, region]
+  (1, 123, 5, 2)
+];
 ```
 
 ## Getting Started
@@ -41,24 +42,24 @@ Values are accessed using coordinates - arrays of values corresponding to positi
 ```javascript
 // Using the client library
 const client = new UnifiedDBClient({
-  baseUrl: 'http://localhost:8000'
+  baseUrl: "http://localhost:8000",
 });
 
 // Create a 3D matrix
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'my-matrix',
+    name: "my-matrix",
     dimensions: [
-      { name: 'x', type: 'numeric', min: 0, max: 100 },
-      { name: 'y', type: 'numeric', min: 0, max: 100 },
-      { name: 'z', type: 'numeric', min: 0, max: 100 }
-    ]
-  })
+      { name: "x", type: "numeric", min: 0, max: 100 },
+      { name: "y", type: "numeric", min: 0, max: 100 },
+      { name: "z", type: "numeric", min: 0, max: 100 },
+    ],
+  }),
 });
 
 // Get a matrix interface
-const matrix = client.matrix('my-matrix');
+const matrix = client.matrix("my-matrix");
 ```
 
 ### Storing Values
@@ -66,8 +67,8 @@ const matrix = client.matrix('my-matrix');
 ```javascript
 // Set a value at specific coordinates
 await matrix.setValue([10, 20, 30], {
-  data: 'Hello from the matrix!',
-  timestamp: new Date().toISOString()
+  data: "Hello from the matrix!",
+  timestamp: new Date().toISOString(),
 });
 ```
 
@@ -86,13 +87,13 @@ console.log(value.value.data); // 'Hello from the matrix!'
 const results = await matrix.query({
   x: { min: 5, max: 15 },
   y: 20,
-  z: { min: 25, max: 35 }
+  z: { min: 25, max: 35 },
 });
 
 // Process the results
-results.results.forEach(result => {
+results.results.forEach((result) => {
   console.log(
-    `Value at [${result.coordinates.join(', ')}]: ${result.value.data}`
+    `Value at [${result.coordinates.join(", ")}]: ${result.value.data}`,
   );
 });
 ```
@@ -106,16 +107,16 @@ results.results.forEach(result => {
 ```javascript
 // Add a new dimension to the matrix
 await matrix.addDimension({
-  name: 'time',
-  type: 'numeric',
+  name: "time",
+  type: "numeric",
   min: 0,
   max: 1000,
-  default: 0
+  default: 0,
 });
 
 // Now you can set values with the new dimension
 await matrix.setValue([10, 20, 30, 5], {
-  data: 'Data at time point 5'
+  data: "Data at time point 5",
 });
 ```
 
@@ -123,7 +124,7 @@ await matrix.setValue([10, 20, 30, 5], {
 
 ```javascript
 // Remove a dimension from the matrix
-await matrix.removeDimension('time');
+await matrix.removeDimension("time");
 ```
 
 #### Resizing Dimensions
@@ -131,8 +132,8 @@ await matrix.removeDimension('time');
 ```javascript
 // Resize the matrix dimensions
 await matrix.resize([
-  { name: 'x', min: 0, max: 200 },
-  { name: 'y', min: 0, max: 200 }
+  { name: "x", min: 0, max: 200 },
+  { name: "y", min: 0, max: 200 },
 ]);
 ```
 
@@ -142,13 +143,13 @@ You can change how the matrix data is stored:
 
 ```javascript
 // Change the matrix storage from memory to database
-await matrix.changeStorage('database', {
-  collection: 'matrix_data',
-  dbType: 'mongodb'
+await matrix.changeStorage("database", {
+  collection: "matrix_data",
+  dbType: "mongodb",
 });
 
 // Or back to memory
-await matrix.changeStorage('memory');
+await matrix.changeStorage("memory");
 ```
 
 ## Common Use Cases
@@ -159,31 +160,31 @@ Perfect for storing and analyzing time-series data:
 
 ```javascript
 // Create a matrix for time-series data
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'metrics',
+    name: "metrics",
     dimensions: [
-      { name: 'time', type: 'numeric', min: 0, max: 10000 }, // Time points
-      { name: 'server', type: 'numeric', min: 0, max: 100 },  // Server IDs
-      { name: 'metric', type: 'numeric', min: 0, max: 50 }    // Different metrics
-    ]
-  })
+      { name: "time", type: "numeric", min: 0, max: 10000 }, // Time points
+      { name: "server", type: "numeric", min: 0, max: 100 }, // Server IDs
+      { name: "metric", type: "numeric", min: 0, max: 50 }, // Different metrics
+    ],
+  }),
 });
 
-const matrix = client.matrix('metrics');
+const matrix = client.matrix("metrics");
 
 // Record CPU usage for server 1 at time 100
 await matrix.setValue([100, 1, 0], { value: 0.75 }); // Metric 0 = CPU
 
 // Record memory usage for server 1 at time 100
-await matrix.setValue([100, 1, 1], { value: 0.50 }); // Metric 1 = Memory
+await matrix.setValue([100, 1, 1], { value: 0.5 }); // Metric 1 = Memory
 
 // Query CPU usage for server 1 over time
 const cpuUsage = await matrix.query({
   server: 1,
   metric: 0,
-  time: { min: 0, max: 1000 }
+  time: { min: 0, max: 1000 },
 });
 ```
 
@@ -193,20 +194,20 @@ Great for complex analytics across multiple dimensions:
 
 ```javascript
 // Create a matrix for user analytics
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'user-analytics',
+    name: "user-analytics",
     dimensions: [
-      { name: 'user', type: 'numeric', min: 0, max: 10000 },  // User IDs
-      { name: 'action', type: 'numeric', min: 0, max: 100 },  // Action types
-      { name: 'day', type: 'numeric', min: 0, max: 365 },     // Day of year
-      { name: 'hour', type: 'numeric', min: 0, max: 24 }      // Hour of day
-    ]
-  })
+      { name: "user", type: "numeric", min: 0, max: 10000 }, // User IDs
+      { name: "action", type: "numeric", min: 0, max: 100 }, // Action types
+      { name: "day", type: "numeric", min: 0, max: 365 }, // Day of year
+      { name: "hour", type: "numeric", min: 0, max: 24 }, // Hour of day
+    ],
+  }),
 });
 
-const matrix = client.matrix('user-analytics');
+const matrix = client.matrix("user-analytics");
 
 // Record user actions
 await matrix.setValue([123, 1, 1, 14], { count: 5 }); // User 123, action 1, day 1, hour 14
@@ -215,7 +216,7 @@ await matrix.setValue([123, 2, 1, 15], { count: 3 }); // User 123, action 2, day
 // Get all actions for a specific user on a specific day
 const userActions = await matrix.query({
   user: 123,
-  day: 1
+  day: 1,
 });
 ```
 
@@ -225,23 +226,23 @@ Perfect for comparing features across products:
 
 ```javascript
 // Create a feature comparison matrix
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'feature-matrix',
+    name: "feature-matrix",
     dimensions: [
-      { name: 'product', type: 'numeric', min: 0, max: 100 },   // Product IDs
-      { name: 'feature', type: 'numeric', min: 0, max: 500 },   // Feature IDs
-      { name: 'version', type: 'numeric', min: 0, max: 100 }    // Version IDs
-    ]
-  })
+      { name: "product", type: "numeric", min: 0, max: 100 }, // Product IDs
+      { name: "feature", type: "numeric", min: 0, max: 500 }, // Feature IDs
+      { name: "version", type: "numeric", min: 0, max: 100 }, // Version IDs
+    ],
+  }),
 });
 
-const matrix = client.matrix('feature-matrix');
+const matrix = client.matrix("feature-matrix");
 
 // Record feature support
-await matrix.setValue([1, 10, 1], { supported: true, since: '2023-01-01' });
-await matrix.setValue([1, 11, 1], { supported: false, planned: '2023-06-01' });
+await matrix.setValue([1, 10, 1], { supported: true, since: "2023-01-01" });
+await matrix.setValue([1, 11, 1], { supported: false, planned: "2023-06-01" });
 ```
 
 ## Best Practices
@@ -258,15 +259,17 @@ await matrix.setValue([1, 11, 1], { supported: false, planned: '2023-06-01' });
 
 ```javascript
 try {
-  await matrix.setValue([10, 20, 30], { data: 'Test' });
+  await matrix.setValue([10, 20, 30], { data: "Test" });
 } catch (error) {
   console.error(`Matrix operation failed: ${error.message}`);
-  
+
   // Common errors
-  if (error.message.includes('dimension')) {
-    console.error('Dimension error: Check your coordinates match the dimensions');
-  } else if (error.message.includes('storage')) {
-    console.error('Storage error: Check your database connection');
+  if (error.message.includes("dimension")) {
+    console.error(
+      "Dimension error: Check your coordinates match the dimensions",
+    );
+  } else if (error.message.includes("storage")) {
+    console.error("Storage error: Check your database connection");
   }
 }
 ```
@@ -275,12 +278,12 @@ try {
 
 ```javascript
 const client = new UnifiedDBClient({
-  baseUrl: 'http://localhost:8000',
-  debug: true  // Enable debug logging
+  baseUrl: "http://localhost:8000",
+  debug: true, // Enable debug logging
 });
 
 // This will log all matrix operations
-const matrix = client.matrix('my-matrix');
+const matrix = client.matrix("my-matrix");
 await matrix.setValue([1, 2, 3], { test: true });
 ```
 

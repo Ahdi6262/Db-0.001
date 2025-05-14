@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[\"no-panic\", \"small\"]","target":8955674961151483972,"profile":1369601567987815722,"path":2770840744460684089,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/ryu-2d104bb659b1e415/dep-lib-ryu","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[\"no-panic\", \"small\"]",
+  "target": 8955674961151483972,
+  "profile": 1369601567987815722,
+  "path": 2770840744460684089,
+  "deps": [],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/ryu-2d104bb659b1e415/dep-lib-ryu",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

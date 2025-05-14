@@ -1,1 +1,25 @@
-{"rustc":8750902384292223123,"features":"[\"as_ref\", \"default\", \"deref\", \"deref_mut\", \"display\", \"error\", \"from\"]","declared_features":"[\"add\", \"add_assign\", \"as_ref\", \"constructor\", \"debug\", \"default\", \"deref\", \"deref_mut\", \"display\", \"error\", \"from\", \"from_str\", \"full\", \"index\", \"index_mut\", \"into\", \"into_iterator\", \"is_variant\", \"mul\", \"mul_assign\", \"not\", \"sum\", \"testing-helpers\", \"try_from\", \"try_into\", \"try_unwrap\", \"unwrap\"]","target":11796376952621915773,"profile":3601279031184244129,"path":5866536350958165779,"deps":[[3060637413840920116,"proc_macro2",false,12145970529213610441],[16126285161989458480,"unicode_xid",false,6629755943271968926],[17990358020177143287,"quote",false,11748299033473964049],[18149961000318489080,"syn",false,18283567963382729359]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/derive_more-impl-bcd6b6af1ac97dfd/dep-lib-derive_more_impl","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"as_ref\", \"default\", \"deref\", \"deref_mut\", \"display\", \"error\", \"from\"]",
+  "declared_features": "[\"add\", \"add_assign\", \"as_ref\", \"constructor\", \"debug\", \"default\", \"deref\", \"deref_mut\", \"display\", \"error\", \"from\", \"from_str\", \"full\", \"index\", \"index_mut\", \"into\", \"into_iterator\", \"is_variant\", \"mul\", \"mul_assign\", \"not\", \"sum\", \"testing-helpers\", \"try_from\", \"try_into\", \"try_unwrap\", \"unwrap\"]",
+  "target": 11796376952621915773,
+  "profile": 3601279031184244129,
+  "path": 5866536350958165779,
+  "deps": [
+    [3060637413840920116, "proc_macro2", false, 12145970529213610441],
+    [16126285161989458480, "unicode_xid", false, 6629755943271968926],
+    [17990358020177143287, "quote", false, 11748299033473964049],
+    [18149961000318489080, "syn", false, 18283567963382729359]
+  ],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/derive_more-impl-bcd6b6af1ac97dfd/dep-lib-derive_more_impl",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

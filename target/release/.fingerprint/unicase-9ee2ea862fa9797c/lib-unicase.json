@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[]","declared_features":"[\"nightly\"]","target":10111812390214232954,"profile":1369601567987815722,"path":6153535847842985328,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/unicase-9ee2ea862fa9797c/dep-lib-unicase","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[]",
+  "declared_features": "[\"nightly\"]",
+  "target": 10111812390214232954,
+  "profile": 1369601567987815722,
+  "path": 6153535847842985328,
+  "deps": [],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/unicase-9ee2ea862fa9797c/dep-lib-unicase",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}

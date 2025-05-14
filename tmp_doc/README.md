@@ -28,38 +28,38 @@ node unified_db_api_server.js
 ### Use the Client Library
 
 ```javascript
-const { UnifiedDBClient } = require('./unified_db_client');
+const { UnifiedDBClient } = require("./unified_db_client");
 
 // Create a client
 const client = new UnifiedDBClient({
-  baseUrl: 'http://localhost:8000',
-  defaultDbType: 'postgresql',
-  debug: true
+  baseUrl: "http://localhost:8000",
+  defaultDbType: "postgresql",
+  debug: true,
 });
 
 // Work with PostgreSQL
-const postgres = client.database('postgresql', 'postgres');
-const users = await postgres.queryRecords('users', { active: true });
+const postgres = client.database("postgresql", "postgres");
+const users = await postgres.queryRecords("users", { active: true });
 
 // Work with Infinite Matrix
 // Create a 3D matrix
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'my-matrix',
+    name: "my-matrix",
     dimensions: [
-      { name: 'x', type: 'numeric', min: 0, max: 100 },
-      { name: 'y', type: 'numeric', min: 0, max: 100 },
-      { name: 'z', type: 'numeric', min: 0, max: 100 }
-    ]
-  })
+      { name: "x", type: "numeric", min: 0, max: 100 },
+      { name: "y", type: "numeric", min: 0, max: 100 },
+      { name: "z", type: "numeric", min: 0, max: 100 },
+    ],
+  }),
 });
 
 // Get a matrix interface
-const matrix = client.matrix('my-matrix');
+const matrix = client.matrix("my-matrix");
 
 // Set values
-await matrix.setValue([10, 20, 30], { data: 'Hello, Matrix!' });
+await matrix.setValue([10, 20, 30], { data: "Hello, Matrix!" });
 
 // Query values
 const results = await matrix.query({ x: { min: 5, max: 15 } });
@@ -71,27 +71,27 @@ The API allows you to configure almost every aspect of the system at runtime:
 
 ```javascript
 // Update performance settings
-await client._fetch('/config', {
-  method: 'PATCH',
+await client._fetch("/config", {
+  method: "PATCH",
   body: JSON.stringify({
-    section: 'performance',
+    section: "performance",
     updates: {
       cacheSize: 5000,
-      queryTimeout: 120000
-    }
-  })
+      queryTimeout: 120000,
+    },
+  }),
 });
 
 // Register a custom adapter
-await client._fetch('/adapters', {
-  method: 'POST',
+await client._fetch("/adapters", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'custom-db',
-    type: 'nosql',
+    name: "custom-db",
+    type: "nosql",
     connectionConfig: {
-      url: 'https://custom-db.example.com'
-    }
-  })
+      url: "https://custom-db.example.com",
+    },
+  }),
 });
 ```
 
@@ -101,40 +101,40 @@ The Infinite Matrix provides powerful capabilities for working with n-dimensiona
 
 ```javascript
 // Create a matrix
-await client._fetch('/matrix', {
-  method: 'POST',
+await client._fetch("/matrix", {
+  method: "POST",
   body: JSON.stringify({
-    name: 'metrics',
+    name: "metrics",
     dimensions: [
-      { name: 'time', min: 0, max: 1000 },
-      { name: 'user', min: 0, max: 10000 },
-      { name: 'metric', min: 0, max: 50 }
-    ]
-  })
+      { name: "time", min: 0, max: 1000 },
+      { name: "user", min: 0, max: 10000 },
+      { name: "metric", min: 0, max: 50 },
+    ],
+  }),
 });
 
-const matrix = client.matrix('metrics');
+const matrix = client.matrix("metrics");
 
 // Store time-series data for users
-await matrix.setValue([1, 123, 0], { value: 42 });  // User 123, metric 0, time 1
-await matrix.setValue([2, 123, 0], { value: 43 });  // User 123, metric 0, time 2
+await matrix.setValue([1, 123, 0], { value: 42 }); // User 123, metric 0, time 1
+await matrix.setValue([2, 123, 0], { value: 43 }); // User 123, metric 0, time 2
 
 // Query by time range for a specific user and metric
 const results = await matrix.query({
   time: { min: 0, max: 10 },
   user: 123,
-  metric: 0
+  metric: 0,
 });
 
 // Add a new dimension
 await matrix.addDimension({
-  name: 'region',
+  name: "region",
   min: 0,
-  max: 5
+  max: 5,
 });
 
 // Now the matrix is 4D, and we can store region-specific data
-await matrix.setValue([3, 123, 0, 2], { value: 44, region: 'Europe' });
+await matrix.setValue([3, 123, 0, 2], { value: 44, region: "Europe" });
 ```
 
 ## Supported Database Types

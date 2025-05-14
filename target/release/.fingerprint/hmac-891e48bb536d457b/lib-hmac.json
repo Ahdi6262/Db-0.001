@@ -1,1 +1,20 @@
-{"rustc":8750902384292223123,"features":"[\"reset\"]","declared_features":"[\"reset\", \"std\"]","target":12991177224612424488,"profile":1369601567987815722,"path":10622308836593690997,"deps":[[17475753849556516473,"digest",false,14104461493995114593]],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/hmac-891e48bb536d457b/dep-lib-hmac","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}
+{
+  "rustc": 8750902384292223123,
+  "features": "[\"reset\"]",
+  "declared_features": "[\"reset\", \"std\"]",
+  "target": 12991177224612424488,
+  "profile": 1369601567987815722,
+  "path": 10622308836593690997,
+  "deps": [[17475753849556516473, "digest", false, 14104461493995114593]],
+  "local": [
+    {
+      "CheckDepInfo": {
+        "dep_info": "release/.fingerprint/hmac-891e48bb536d457b/dep-lib-hmac",
+        "checksum": false
+      }
+    }
+  ],
+  "rustflags": [],
+  "config": 2069994364910194474,
+  "compile_kind": 0
+}
