@@ -2,7 +2,7 @@ modules = ["rust", "nodejs-20", "postgresql-16"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["postgresql"]
+packages = ["postgresql", "gh", "git-repo"]
 
 [workflows]
 runButton = "Project"
