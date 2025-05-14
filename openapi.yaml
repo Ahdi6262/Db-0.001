@@ -1,0 +1,464 @@
+openapi: 3.0.0
+info:
+  title: Unified Database API
+  description: A unified API for interacting with multiple database types
+  version: 0.1.0
+  contact:
+    name: Unified Database API Team
+servers:
+  - url: http://localhost:8000
+    description: Local development server
+paths:
+  /api/v1/databases:
+    get:
+      summary: Get information about all available databases
+      operationId: getDatabaseInfo
+      tags:
+        - Database Management
+      responses:
+        '200':
+          description: List of available databases
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  databases:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DatabaseInfo'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/v1/databases/{db_type}/{db_name}/records/{id}:
+    get:
+      summary: Get a record by ID
+      operationId: getRecord
+      tags:
+        - Records
+      parameters:
+        - name: db_type
+          in: path
+          required: true
+          description: Type of database (postgresql, mongodb, redis, etc.)
+          schema:
+            type: string
+        - name: db_name
+          in: path
+          required: true
+          description: Name of the database
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          description: ID of the record
+          schema:
+            type: string
+        - name: collection
+          in: query
+          required: true
+          description: Name of the collection or table
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Record found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecordResponse'
+        '404':
+          description: Record not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a record
+      operationId: updateRecord
+      tags:
+        - Records
+      parameters:
+        - name: db_type
+          in: path
+          required: true
+          description: Type of database (postgresql, mongodb, redis, etc.)
+          schema:
+            type: string
+        - name: db_name
+          in: path
+          required: true
+          description: Name of the database
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          description: ID of the record
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RecordRequest'
+      responses:
+        '200':
+          description: Record updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecordResponse'
+        '404':
+          description: Record not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a record
+      operationId: deleteRecord
+      tags:
+        - Records
+      parameters:
+        - name: db_type
+          in: path
+          required: true
+          description: Type of database (postgresql, mongodb, redis, etc.)
+          schema:
+            type: string
+        - name: db_name
+          in: path
+          required: true
+          description: Name of the database
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          description: ID of the record
+          schema:
+            type: string
+        - name: collection
+          in: query
+          required: true
+          description: Name of the collection or table
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Record deleted
+        '404':
+          description: Record not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/v1/databases/{db_type}/{db_name}/records:
+    post:
+      summary: Create a new record
+      operationId: createRecord
+      tags:
+        - Records
+      parameters:
+        - name: db_type
+          in: path
+          required: true
+          description: Type of database (postgresql, mongodb, redis, etc.)
+          schema:
+            type: string
+        - name: db_name
+          in: path
+          required: true
+          description: Name of the database
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RecordRequest'
+      responses:
+        '201':
+          description: Record created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecordResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/v1/databases/{db_type}/{db_name}/query:
+    post:
+      summary: Query records
+      operationId: queryRecords
+      tags:
+        - Records
+      parameters:
+        - name: db_type
+          in: path
+          required: true
+          description: Type of database (postgresql, mongodb, redis, etc.)
+          schema:
+            type: string
+        - name: db_name
+          in: path
+          required: true
+          description: Name of the database
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QueryRequest'
+      responses:
+        '200':
+          description: Query results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RecordResponse'
+        '400':
+          description: Invalid query
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/v1/databases/{db_type}/{db_name}/transactions:
+    post:
+      summary: Execute a transaction
+      operationId: executeTransaction
+      tags:
+        - Transactions
+      parameters:
+        - name: db_type
+          in: path
+          required: true
+          description: Type of database (postgresql, mongodb, redis, etc.)
+          schema:
+            type: string
+        - name: db_name
+          in: path
+          required: true
+          description: Name of the database
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionRequest'
+      responses:
+        '200':
+          description: Transaction executed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Transaction executed successfully
+        '400':
+          description: Invalid transaction
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    RecordRequest:
+      type: object
+      required:
+        - collection
+        - data
+      properties:
+        collection:
+          type: string
+          description: Name of the collection or table
+          example: users
+        data:
+          type: object
+          description: Record data as JSON
+          example:
+            name: John Doe
+            email: john@example.com
+            age: 30
+
+    RecordResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the record
+          example: 123e4567-e89b-12d3-a456-426614174000
+        data:
+          type: object
+          description: Record data as JSON
+          example:
+            name: John Doe
+            email: john@example.com
+            age: 30
+
+    QueryRequest:
+      type: object
+      required:
+        - collection
+        - query
+      properties:
+        collection:
+          type: string
+          description: Name of the collection or table
+          example: users
+        query:
+          type: object
+          description: Query parameters
+          example:
+            age: 30
+        limit:
+          type: integer
+          description: Maximum number of records to return
+          example: 10
+        offset:
+          type: integer
+          description: Number of records to skip
+          example: 0
+        sort_by:
+          type: string
+          description: Field to sort by
+          example: name
+        sort_order:
+          type: string
+          enum: [asc, desc]
+          description: Sort order
+          example: asc
+
+    DatabaseInfo:
+      type: object
+      properties:
+        db_type:
+          type: string
+          description: Type of database
+          example: postgresql
+        name:
+          type: string
+          description: Name of the database
+          example: postgres
+        status:
+          type: string
+          description: Connection status
+          example: connected
+        collections:
+          type: array
+          items:
+            type: string
+          description: List of collections or tables
+          example: [users, products, orders]
+
+    TransactionRequest:
+      type: object
+      required:
+        - operations
+      properties:
+        operations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Operation'
+          description: List of operations to execute in the transaction
+
+    Operation:
+      type: object
+      required:
+        - operation_type
+        - collection
+      properties:
+        operation_type:
+          type: string
+          enum: [create, update, delete]
+          description: Type of operation
+          example: create
+        collection:
+          type: string
+          description: Name of the collection or table
+          example: users
+        id:
+          type: string
+          description: ID of the record (required for update and delete)
+          example: 123e4567-e89b-12d3-a456-426614174000
+        data:
+          type: object
+          description: Record data (required for create and update)
+          example:
+            name: John Doe
+            email: john@example.com
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: Record not found
+
+tags:
+  - name: Database Management
+    description: Operations for managing database connections and information
+  - name: Records
+    description: Operations for managing records in databases
+  - name: Transactions
+    description: Operations for executing transactions
